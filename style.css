@@ -239,7 +239,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -506,7 +506,11 @@ a {
         width: 100%;
         background-color: white;
         border: 1px solid lightgray;
-        line-height: 2rem; } }
+        line-height: 2rem;
+        text-decoration: none;
+        color: gray; }
+        .tiled-navigation ul li a img {
+          border-bottom: 2px solid gray; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -746,7 +750,9 @@ object {
 
 .site-footer {
   clear: both;
-  width: 100%; }
+  width: 100%;
+  min-height: 3rem;
+  background-color: darkgrey; }
 
 .site-branding {
   width: 30%;

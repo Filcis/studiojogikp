@@ -103,6 +103,8 @@ add_action( 'widgets_init', 'studiojogikp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function studiojogikp_scripts() {
+    wp_enqueue_style('studiojogikp-font','https://fonts.googleapis.com/css?family=Hind') ;
+    
 	wp_enqueue_style( 'studiojogikp-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'studiojogikp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -114,7 +116,6 @@ function studiojogikp_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'studiojogikp_scripts' );
-
 /**
  * Implement the Custom Header feature.
  */

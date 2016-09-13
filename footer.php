@@ -10,19 +10,33 @@
  */
 
 ?>
+    </div>
+    <!-- #content -->
+    <div class="footer-area full-wrapper">
+        <div class="page-content-wrapper">
+            <footer id="colophon" class="site-footer" role="contentinfo">
+                <div class="site-info">
+                    <div id="hl-footer-sidebar1">
+                        <?php
+			if(is_active_sidebar('hl-footer-sidebar-1')){
+			dynamic_sidebar('hl-footer-sidebar-1');
+			}
+			?>
+                    </div>
+                    <div id="hl-footer-sidebar2">
+                        <?php
+			if(is_active_sidebar('hl-footer-sidebar-2')){
+			dynamic_sidebar('hl-footer-sidebar-2');
+			}
+			?>
+                    </div>
+                </div>
+                <!-- .site-info -->
+            </footer>
+            <!-- #colophon -->
+        </div>
+        <!-- #page -->
+        <?php wp_footer(); ?>
+            </body>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'studiojogikp' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'studiojogikp' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'studiojogikp' ), 'studiojogikp', '<a href="http://underscores.me/" rel="designer">Filip Ciślak</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
-</html>
+            </html>
