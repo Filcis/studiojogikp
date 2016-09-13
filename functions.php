@@ -139,3 +139,43 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+
+
+// Add filter to specific menus 
+add_filter('wp_nav_menu_args', 'add_filter_to_menus');
+function add_filter_to_menus($args) {
+
+    // You can test against things like $args['menu'], $args['menu_id'] or $args['theme_location']
+    if( $args['theme_location'] == 'secondary') {
+        add_filter( 'wp_setup_nav_menu_item', 'filter_menu_items' );
+    }
+
+    return $args;
+}
+
+// Filter menu
+function filter_menu_items($item) {
+        // Get post and image ID
+        $post_id = url_to_postid( $item->url );
+        $thumb_id = get_post_thumbnail_id( $post_id );
+
+    if( !empty($thumb_id) ) {
+        // Make the title just be the featured image.
+        $output = wp_get_attachment_image( $thumb_id, 'poster') . esc_html($item->title);
+        $item->title = $output;
+    }
+
+    return $item;
+}
+
+
+// Remove filters
+add_filter('wp_nav_menu_items','remove_filter_from_menus', 10, 2);
+function remove_filter_from_menus( $nav, $args ) {
+    remove_filter( 'wp_setup_nav_menu_item', 'filter_menu_items' );
+    return $nav;
+}

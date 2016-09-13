@@ -50,9 +50,11 @@
                     </nav>
                 </div>
                 <!-- #site-navigation -->
-                <nav id="secondary-site-navigation" class="tiled-navigation" role="navigation">
-                    <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu-tiles' ) ); ?>
-                </nav>
+                <div class="secondary-nav-wrapper clear">
+                    <nav id="secondary-site-navigation" class="tiled-navigation" role="navigation">
+                        <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu-tiles' ) ); ?>
+                    </nav>
+                </div>
             </header>
             <!-- #masthead -->
             <div id="content" class="site-content">

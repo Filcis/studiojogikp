@@ -447,8 +447,7 @@ a {
 
 .main-navigation {
   display: block;
-  float: right;
-  width: 70%; }
+  float: right; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -491,6 +490,24 @@ a {
   .main-navigation ul {
     display: block;
     float: right; } }
+.tiled-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+  @media (min-width: 765px) {
+    .tiled-navigation ul li {
+      float: left;
+      display: block;
+      width: 25%;
+      padding-left: 1rem;
+      text-align: center; }
+      .tiled-navigation ul li a {
+        display: block;
+        width: 100%;
+        background-color: white;
+        border: 1px solid lightgray;
+        line-height: 2rem; } }
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -719,9 +736,8 @@ object {
   float: right;
   margin: 0 0 0 -25%;
   width: 100%; }
-
-.site-main {
-  margin: 0 0 0 25%; }
+  .content-area .site-main {
+    margin: 0 0 0 25%; }
 
 .site-content .widget-area {
   float: left;
@@ -743,7 +759,8 @@ object {
   background-color: white;
   padding: 1rem; }
 
-.main-nav-wrapper {
+.main-nav-wrapper,
+.secondary-nav-wrapper {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto;
