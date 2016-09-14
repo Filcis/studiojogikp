@@ -12,6 +12,15 @@
  * @package studiojogikp
  */
 
+/*
+Go to first child if any
+*/
+$childpages = get_pages("child_of=".$post->ID."&sort_column=menu_order");
+if ($childpages) {
+$firstchild = $childpages[0];
+wp_redirect(get_permalink($firstchild->ID));
+}
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
