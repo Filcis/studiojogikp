@@ -95,7 +95,43 @@ function studiojogikp_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	) ); 
+        register_sidebar( array(
+            'name'          => esc_html__( 'Sidebar Szkoła Jogi', 'studiojogikp' ),
+            'id'            => 'sidebar-szkola',
+            'description'   => esc_html__( 'Add widgets here.', 'studiojogikp' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+            'name'          => esc_html__( 'Sidebar Wyjazdy', 'studiojogikp' ),
+            'id'            => 'sidebar-wyjazdy',
+            'description'   => esc_html__( 'Add widgets here.', 'studiojogikp' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+            'name'          => esc_html__( 'Sidebar Szkolenia', 'studiojogikp' ),
+            'id'            => 'sidebar-szkolenia',
+            'description'   => esc_html__( 'Add widgets here.', 'studiojogikp' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
+        register_sidebar( array(
+            'name'          => esc_html__( 'Sidebar zajęcia specjalistyczne', 'studiojogikp' ),
+            'id'            => 'sidebar-specjalistyczne',
+            'description'   => esc_html__( 'Add widgets here.', 'studiojogikp' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
 }
 add_action( 'widgets_init', 'studiojogikp_widgets_init' );
 
@@ -141,6 +177,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+//require_once(get_template_directory() . '/studiojogi-metaboxes.php');
 
 
 
@@ -180,7 +217,7 @@ function remove_filter_from_menus( $nav, $args ) {
     remove_filter( 'wp_setup_nav_menu_item', 'filter_menu_items' );
     return $nav;
 }
-
+//dodatkowe opisy w menu
 function prefix_nav_description( $item_output, $item, $depth, $args ) {
     if (is_front_page()){
     if ( !empty( $item->description ) ) {

@@ -22,11 +22,9 @@ wp_redirect(get_permalink($firstchild->ID));
 }
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <?php
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
@@ -38,10 +36,30 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
+        </main>
+        <!-- #main -->
+    </div>
+    <!-- #primary -->
+    <?php
+if(is_page('szkola-jogi', 9) || $post->post_parent == '9'){
+    if (is_active_sidebar('sidebar-szkola')){
+        dynamic_sidebar('sidebar-szkola');
+    }
+}   elseif(is_page('wyjazdy', 19) || $post->post_parent == '19'){
+    if (is_active_sidebar('sidebar-wyjazdy')){
+        dynamic_sidebar('sidebar-szkola');
+    }
+}   elseif(is_page('szkola-jogi', 13) || $post->post_parent == '13'){
+    if (is_active_sidebar('sidebar-specjalistyczne')){
+        dynamic_sidebar('sidebar-szkola');
+    }
+}   elseif(is_page('szkola-jogi', 9) || $post->post_parent == '9'){
+    if (is_active_sidebar('sidebar-szkola')){
+        dynamic_sidebar('sidebar-szkola');
+    }
+}
+else{
+    get_sidebar();
+}
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
 get_footer();
