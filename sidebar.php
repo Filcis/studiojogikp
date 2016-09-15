@@ -8,7 +8,7 @@
  */
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
-if ( ! is_active_sidebar( 'sidebar-1' ) || ! is_plugin_active('conditional-widgets/cets_conditional_widgets.php') ) {
+if ( ! is_active_sidebar( 'sidebar-1' )) {
 	return;
 }
 ?>
