@@ -299,7 +299,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #f3f2f2;
+  background: #f0f3f4;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -333,11 +333,6 @@ dt {
 
 dd {
   margin: 0 1.5em 1.5em; }
-
-.widget-area ul {
-  list-style: none;
-  margin: 0 0 1.5em 0;
-  padding: 0; }
 
 img {
   height: auto;
@@ -448,6 +443,9 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.site-logo img {
+  height: 3rem; }
+
 .site-header {
   background-color: white;
   margin-bottom: 2rem; }
@@ -518,6 +516,23 @@ a {
         color: gray; }
         .tiled-navigation ul li a img {
           border-bottom: 2px solid gray; } }
+
+.widget-area ul {
+  list-style: none;
+  margin: 0 0 1.5em 0;
+  padding: 0; }
+.widget-area .menu .current-menu-item a {
+  background-color: lightgray; }
+.widget-area .menu li {
+  text-align: center;
+  margin: 1rem 0; }
+  .widget-area .menu li a {
+    border: 2px solid lightgray;
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0; }
+    .widget-area .menu li a:hover {
+      background-color: lightgray; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -771,6 +786,10 @@ object {
   margin: 0 auto;
   background-color: white;
   padding: 1rem; }
+
+@media (min-width: 765px) {
+  .site-main {
+    padding-left: 3rem; } }
 
 .main-nav-wrapper,
 .secondary-nav-wrapper {
