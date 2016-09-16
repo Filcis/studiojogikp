@@ -21,7 +21,7 @@ function studiojogikp_cpts_wyjazdy() {
         "menu_icon" => "dashicons-palmtree",
 		"capability_type" => "post",
 		"map_meta_cap" => true,
-//		"hierarchical" => false,
+		"hierarchical" => false,
 		"rewrite" => array( "slug" => "wyjazdy", "with_front" => true ),
 		"query_var" => true,
 		

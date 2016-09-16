@@ -18,15 +18,15 @@
                 <div class="site-info">
                     <div id="hl-footer-sidebar1">
                         <?php
-			if(is_active_sidebar('hl-footer-sidebar-1')){
-			dynamic_sidebar('hl-footer-sidebar-1');
+			if(is_active_sidebar('sjkp-footer-sidebar-1')){
+			dynamic_sidebar('sjkp-footer-sidebar-1');
 			}
 			?>
                     </div>
-                    <div id="hl-footer-sidebar2">
+                    <div id="sjkp-footer-sidebar2">
                         <?php
-			if(is_active_sidebar('hl-footer-sidebar-2')){
-			dynamic_sidebar('hl-footer-sidebar-2');
+			if(is_active_sidebar('sjkp-footer-sidebar-2')){
+			dynamic_sidebar('sjkp-footer-sidebar-2');
 			}
 			?>
                     </div>
