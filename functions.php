@@ -97,6 +97,26 @@ function studiojogikp_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+    
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer kolumna 1', 'studiojogikp' ),
+        'id'            => 'sjkp-footer-sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'studiojogikp' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4 class="footer-title">',
+		'after_title'   => '</h4>',
+    ) );
+    
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer kolumna 2', 'studiojogikp' ),
+        'id'            => 'sjkp-footer-sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'studiojogikp' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4 class="footer-title">',
+		'after_title'   => '</h4>',
+    ) );
 }
 add_action( 'widgets_init', 'studiojogikp_widgets_init' );
 
