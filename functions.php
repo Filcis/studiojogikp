@@ -212,7 +212,7 @@ function filter_menu_items($item) {
 
     if( !empty($thumb_id) ) {
         // Make the title just be the featured image.
-        $output = wp_get_attachment_image( $thumb_id, 'poster') . esc_html($item->title);
+        $output = '<div class="menu-tiles" style="background-image: url('. wp_get_attachment_image_url( $thumb_id, 'poster')  . ')"></div>'. esc_html($item->title);
         $item->title = $output;
     }
 

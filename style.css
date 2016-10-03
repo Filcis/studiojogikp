@@ -244,8 +244,20 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   clear: both; }
+
+.entry-title {
+  font-size: 2.6rem;
+  font-weight: bolder;
+  display: inline-block;
+  border-top: 2px solid darkgrey;
+  border-bottom: 2px solid darkgrey; }
 
 p {
   margin-bottom: 1.5em; }
@@ -299,7 +311,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #f0f3f4;
+  background: #f2f2f3;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -493,7 +505,7 @@ a {
     float: left;
     display: block;
     width: 25%;
-    padding-left: 1rem;
+    padding-left: 0.4rem;
     text-align: center; }
     .tiled-navigation ul li a {
       display: block;
@@ -503,8 +515,12 @@ a {
       line-height: 2rem;
       text-decoration: none;
       color: gray; }
-      .tiled-navigation ul li a img {
-        border-bottom: 2px solid gray; }
+
+.menu-tiles {
+  height: 16rem;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid lightgray; }
 
 .widget-area ul {
   list-style: none;
@@ -752,15 +768,10 @@ object {
 --------------------------------------------------------------*/
 .content-area {
   float: right;
-  margin: 0 0 0 -25%;
+  margin: 0 0 5rem -25%;
   width: 100%; }
   .content-area .site-main {
     margin: 0 0 0 25%; }
-
-.site-content .widget-area, .site-info .widget-area {
-  float: left;
-  overflow: hidden;
-  width: 25%; }
 
 .site-footer {
   clear: both;
@@ -778,27 +789,28 @@ object {
 .site-content, .site-info {
   width: 90%;
   max-width: 1280px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 1rem; }
+  margin: 0 auto; }
 
-@media (min-width: 765px) {
-  .site-main {
-    padding-left: 3rem; } }
+.site-main {
+  background-color: white; }
+  @media (min-width: 765px) {
+    .site-main {
+      padding: 1.5rem;
+      padding-left: 3rem; } }
 
 .fullwidth-nav-wrapper {
   background-color: #303035; }
 
 .main-nav-wrapper,
 .secondary-nav-wrapper {
-  width: 90%;
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 1rem; }
+  padding: 0.5rem; }
 
 .site-info {
   background-color: #303035;
-  color: #fafafa; }
+  color: #fafafa;
+  box-shadow: none; }
   .site-info > div {
     width: 25%;
     float: left;
@@ -813,5 +825,18 @@ object {
     .site-info li a {
       font-size: 0.8rem;
       color: #fafafa; }
+
+.site-content .widget-area, .site-info .widget-area {
+  float: left;
+  overflow: hidden;
+  padding: 0 1rem 1rem 1rem;
+  width: 25%; }
+
+.widget {
+  background-color: white;
+  padding: 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  border: 1px solid lightgrey; }
 
 /*# sourceMappingURL=style.css.map */
