@@ -30,6 +30,20 @@
 			}
 			?>
                     </div>
+                    <div id="sjkp-footer-sidebar3">
+                        <?php
+			if(is_active_sidebar('sjkp-footer-sidebar-3')){
+			dynamic_sidebar('sjkp-footer-sidebar-3');
+			}
+			?>
+                    </div>
+                    <div id="sjkp-footer-sidebar4">
+                        <?php
+			if(is_active_sidebar('sjkp-footer-sidebar-4')){
+			dynamic_sidebar('sjkp-footer-sidebar-4');
+			}
+			?>
+                    </div>
                 </div>
                 <!-- .site-info -->
             </footer>

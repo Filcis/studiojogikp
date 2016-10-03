@@ -597,7 +597,9 @@ textarea {
 .site-header:before,
 .site-header:after,
 .site-content:before,
+.site-info:before,
 .site-content:after,
+.site-info:after,
 .site-footer:before,
 .site-footer:after {
   content: "";
@@ -609,6 +611,7 @@ textarea {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
+.site-info:after,
 .site-footer:after {
   clear: both; }
 
@@ -746,7 +749,7 @@ object {
   .content-area .site-main {
     margin: 0 0 0 25%; }
 
-.site-content .widget-area {
+.site-content .widget-area, .site-info .widget-area {
   float: left;
   overflow: hidden;
   width: 25%; }
@@ -755,7 +758,7 @@ object {
   clear: both;
   width: 100%;
   min-height: 3rem;
-  background-color: darkgrey; }
+  background-color: #303035; }
 
 .site-branding {
   width: 30%;
@@ -764,7 +767,7 @@ object {
     .site-branding {
       float: none; } }
 
-.site-content {
+.site-content, .site-info {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto;
@@ -781,5 +784,23 @@ object {
   max-width: 1280px;
   margin: 0 auto;
   padding: 1rem; }
+
+.site-info {
+  background-color: #303035;
+  color: #fafafa; }
+  .site-info > div {
+    width: 25%;
+    float: left;
+    padding-right: 1.5rem; }
+  .site-info:last-child {
+    padding-right: 0; }
+  .site-info ul {
+    margin: 0;
+    padding: 0; }
+  .site-info li {
+    list-style: none; }
+    .site-info li a {
+      font-size: 0.8rem;
+      color: #fafafa; }
 
 /*# sourceMappingURL=style.css.map */
