@@ -425,97 +425,78 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-  color: royalblue;
-  text-decoration: none; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
 .site-logo img {
-  height: 3rem; }
+  max-height: 3rem; }
 
 .site-header {
   background-color: white;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px; }
+
+.mobile-navigation {
+  width: 100%;
+  display: block;
+  padding: 20px; }
+  .mobile-navigation ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 1rem; }
+  .mobile-navigation ul > li {
+    border-bottom-color: #999;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 1rem 0; }
+  .mobile-navigation a {
+    text-decoration: none;
+    padding: 1rem 0; }
+  @media (min-width: 765px) {
+    .mobile-navigation {
+      display: none; } }
 
 .main-navigation {
   display: block;
   float: right; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: right;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    margin-left: 1.5rem;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+  @media (min-width: 1px) and (max-width: 764px) {
+    .main-navigation {
+      display: none; } }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
 
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
+.main-navigation li {
+  float: left;
+  margin-left: 1.5rem;
+  position: relative; }
 
-  .main-navigation ul {
-    display: block;
-    float: right; } }
+.main-navigation a {
+  display: block;
+  text-decoration: none; }
+
+@media (min-width: 1px) and (max-width: 764px) {
+  .tiled-navigation {
+    display: none; } }
 .tiled-navigation ul {
   list-style: none;
   margin: 0;
   padding-left: 0; }
-  @media (min-width: 765px) {
-    .tiled-navigation ul li {
-      float: left;
+  .tiled-navigation ul li {
+    float: left;
+    display: block;
+    width: 25%;
+    padding-left: 1rem;
+    text-align: center; }
+    .tiled-navigation ul li a {
       display: block;
-      width: 25%;
-      padding-left: 1rem;
-      text-align: center; }
-      .tiled-navigation ul li a {
-        display: block;
-        width: 100%;
-        background-color: white;
-        border: 1px solid lightgray;
-        line-height: 2rem;
-        text-decoration: none;
-        color: gray; }
-        .tiled-navigation ul li a img {
-          border-bottom: 2px solid gray; } }
+      width: 100%;
+      background-color: white;
+      border: 1px solid lightgray;
+      line-height: 2rem;
+      text-decoration: none;
+      color: gray; }
+      .tiled-navigation ul li a img {
+        border-bottom: 2px solid gray; }
 
 .widget-area ul {
   list-style: none;
@@ -779,6 +760,9 @@ object {
 .site-branding {
   width: 30%;
   float: left; }
+  @media (min-width: 1px) and (max-width: 764px) {
+    .site-branding {
+      float: none; } }
 
 .site-content {
   width: 90%;
