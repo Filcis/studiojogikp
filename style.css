@@ -425,17 +425,30 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+a {
+  color: royalblue;
+  text-decoration: none; }
+  a:visited {
+    color: purple; }
+  a:hover, a:focus, a:active {
+    color: midnightblue; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
 .site-logo img {
   max-height: 3rem; }
 
 .site-header {
-  background-color: white;
-  margin-bottom: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px; }
+  margin-bottom: 3.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px;
+  background-color: #a1a1a5; }
 
 .mobile-navigation {
   width: 100%;
   display: block;
+  background-color: #ddd;
   padding: 20px; }
   .mobile-navigation ul {
     list-style: none;
@@ -444,11 +457,7 @@ textarea {
   .mobile-navigation ul > li {
     border-bottom-color: #999;
     border-bottom-style: solid;
-    border-bottom-width: 1px;
-    padding: 1rem 0; }
-  .mobile-navigation a {
-    text-decoration: none;
-    padding: 1rem 0; }
+    border-bottom-width: 1px; }
   @media (min-width: 765px) {
     .mobile-navigation {
       display: none; } }
@@ -464,15 +473,14 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0; }
-
 .main-navigation li {
   float: left;
   margin-left: 1.5rem;
   position: relative; }
-
 .main-navigation a {
   display: block;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #fafafa; }
 
 @media (min-width: 1px) and (max-width: 764px) {
   .tiled-navigation {
@@ -777,6 +785,9 @@ object {
 @media (min-width: 765px) {
   .site-main {
     padding-left: 3rem; } }
+
+.fullwidth-nav-wrapper {
+  background-color: #303035; }
 
 .main-nav-wrapper,
 .secondary-nav-wrapper {
