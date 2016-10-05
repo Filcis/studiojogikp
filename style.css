@@ -455,7 +455,7 @@ a {
 .site-header {
   margin-bottom: 3.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px;
-  background-color: #a1a1a5; }
+  background-color: #f2f2f3; }
 
 .mobile-navigation {
   width: 100%;
@@ -493,6 +493,9 @@ a {
   display: block;
   text-decoration: none;
   color: #fafafa; }
+
+.menu-toggle-button {
+  margin: 0 auto; }
 
 @media (min-width: 1px) and (max-width: 764px) {
   .tiled-navigation {

@@ -147,7 +147,7 @@ function studiojogikp_scripts() {
     
 	wp_enqueue_style( 'studiojogikp-style', get_stylesheet_uri() );
 
-//	wp_enqueue_script( 'studiojogikp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'studiojogikp-navigation', get_template_directory_uri() . '/js/toggle-menu.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'studiojogikp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -226,7 +226,7 @@ function remove_filter_from_menus( $nav, $args ) {
     remove_filter( 'wp_setup_nav_menu_item', 'filter_menu_items' );
     return $nav;
 }
-
+// na stronie głównej dodaj opisy linków do kafelków
 function prefix_nav_description( $item_output, $item, $depth, $args ) {
     if (is_front_page()){
     if ( !empty( $item->description ) ) {
