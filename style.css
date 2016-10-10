@@ -525,23 +525,6 @@ a {
   background-size: cover;
   border-bottom: 1px solid lightgray; }
 
-.widget-area ul {
-  list-style: none;
-  margin: 0 0 1.5em 0;
-  padding: 0; }
-.widget-area .menu .current-menu-item a {
-  background-color: lightgray; }
-.widget-area .menu li {
-  text-align: center;
-  margin: 1rem 0; }
-  .widget-area .menu li a {
-    border: 2px solid lightgray;
-    width: 100%;
-    display: block;
-    padding: 0.5rem 0; }
-    .widget-area .menu li a:hover {
-      background-color: lightgray; }
-
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -841,5 +824,24 @@ object {
   border-radius: 6px;
   margin-bottom: 1.5rem;
   border: 1px solid lightgrey; }
+
+.widget-area ul {
+  list-style: none;
+  margin: 0 0 1.5em 0;
+  padding: 0; }
+.widget-area .menu .current-menu-item a {
+  background-color: lightgray; }
+.widget-area .menu li {
+  text-align: center;
+  margin: 1rem 0; }
+  .widget-area .menu li a {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    padding: 0.3rem 0;
+    color: gray; }
+    .widget-area .menu li a:hover {
+      background-color: lightgray; }
 
 /*# sourceMappingURL=style.css.map */

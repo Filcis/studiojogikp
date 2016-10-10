@@ -239,3 +239,5 @@ add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );
 
 
 //dodaj listę podstron na początek sidebara
+
+//
