@@ -2,7 +2,7 @@
     <div class="fullwidth-nav-wrapper">
         <div class="main-nav-wrapper clear">
             <div class="site-branding"> <a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                <img alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_template_directory_uri() . '/assets/logo-negatyw.png' ?>"></a> </div>
+                                <img alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_template_directory_uri() . '/assets/logo poziom.png' ?>"></a> </div>
             <button class="menu-toggle-button">menu</button>
             <!-- .site-branding -->
             <nav id="site-navigation" class="main-navigation" role="navigation">
