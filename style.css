@@ -548,7 +548,7 @@ a {
         display: block;
         width: 100%;
         background-color: white;
-        border: 1px solid lightgray; }
+        border: 1px solid #444; }
       .tiled-navigation ul li .tiles-title {
         line-height: 2rem;
         text-decoration: none;
@@ -853,7 +853,7 @@ object {
   display: block; }
 
 .secondary-nav-wrapper {
-  background-color: #444;
+  background-color: #252525;
   padding: 2rem 1rem; }
 
 .main-nav-wrapper {

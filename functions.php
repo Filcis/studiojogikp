@@ -212,7 +212,13 @@ function filter_menu_items($item) {
 
     if( !empty($thumb_id) ) {
         // Make the title just be the featured image.
-        $output = '<div class="menu-tiles" style="background-image: url('. wp_get_attachment_image_url( $thumb_id, 'poster')  . ')"></div>'. esc_html($item->title);
+        $thumb_image = wp_get_attachment_image_url( $thumb_id, 'poster');
+        // jeżeli menu nie znajduje się na stronie głównej, dodaj nazwę do linku
+        if( !is_front_page()){
+        $output = '<div class="menu-tiles" style="background-image: url('. $thumb_image . ')"></div>'. esc_html($item->title);
+        } else {
+            $output = '<div class="menu-tiles" style="background-image: url('. $thumb_image . ')"></div>';
+        }
         $item->title = $output;
     }
 
@@ -230,7 +236,12 @@ function remove_filter_from_menus( $nav, $args ) {
 function prefix_nav_description( $item_output, $item, $depth, $args ) {
     if (is_front_page()){
     if ( !empty( $item->description ) ) {
-        $item_output = str_replace( $args->link_after . '</a>', '<span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
+        //stylizowanie opisu (br po każdym przecinku)
+        $item->description = str_replace(',',',<br>',$item->description);
+        //dodaj link do output
+        $item_output = str_replace( $args->link_after . '</a>',
+                                   $args->link_after . '</a> <p class="menu-item-description">' . $item->description . '</p><a href='. esc_html($item->url) .'>więcej...</a>',
+                                   $item_output );
     }
     }
     return $item_output;
