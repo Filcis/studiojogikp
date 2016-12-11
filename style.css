@@ -554,25 +554,23 @@ a {
         text-decoration: none;
         color: gray;
         margin: 0;
-        height: 2.5rem;
-        border-top: 2px solid white;
-        transition: border 0.6s; }
-    .tiled-navigation ul .wyjazdy a:hover .tiles-title,
-    .tiled-navigation ul .current-page-ancestor .tiles-title,
-    .tiled-navigation ul .wyjazdy.current-menu-item .tiles-title {
-      border-top: 2px solid #0047AB; }
-    .tiled-navigation ul .szkolenia a:hover .tiles-title,
-    .tiled-navigation ul .current-page-ancestor .tiles-title,
-    .tiled-navigation ul .szkolenia.current-menu-item .tiles-title {
-      border-top: 2px solid #00abd1; }
-    .tiled-navigation ul .terapia a:hover .tiles-title,
-    .tiled-navigation ul .current-page-ancestor .tiles-title,
-    .tiled-navigation ul .terapia.current-menu-item .tiles-title {
-      border-top: 2px solid #9683ec; }
-    .tiled-navigation ul .szkola a:hover .tiles-title,
-    .tiled-navigation ul .current-page-ancestor .tiles-title,
-    .tiled-navigation ul .szkola.current-menu-item .tiles-title {
-      border-top: 2px solid #4400cf; }
+        height: 2.5rem; }
+      .tiled-navigation ul li .description {
+        color: gray;
+        text-align: left;
+        font-size: 0.9rem;
+        margin: 1rem auto 2rem auto;
+        width: 70%;
+        padding-top: 1rem;
+        border-top: 1px solid lightgray; }
+
+.wyjazdy .sjkp_page_icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("assets/wyjazdy_icon.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 2rem auto 0.5rem auto; }
 
 .menu-tiles {
   height: 16rem;
