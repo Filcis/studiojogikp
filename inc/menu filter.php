@@ -1,3 +1,5 @@
+<?php
+
 // Add filter to specific menus 
 add_filter('wp_nav_menu_args', 'add_filter_to_menus');
 function add_filter_to_menus($args) {

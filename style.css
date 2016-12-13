@@ -469,6 +469,9 @@ a {
   a:hover, a:active {
     outline: 0; }
 
+@media (min-width: 1px) and (max-width: 764px) {
+  .site-logo {
+    margin-left: 2rem; } }
 .site-logo img {
   max-height: 3.7rem; }
 
@@ -479,17 +482,28 @@ a {
 
 .mobile-navigation {
   width: 100%;
-  display: block;
-  background-color: #ddd;
-  padding: 20px; }
+  display: none;
+  background-color: #303035;
+  position: absolute;
+  width: 100%;
+  top: 4rem; }
   .mobile-navigation ul {
     list-style: none;
     margin: 1rem 0;
-    padding: 1rem; }
+    padding: 1rem 3rem; }
   .mobile-navigation ul > li {
-    border-bottom-color: #999;
+    border-bottom-color: #444;
     border-bottom-style: solid;
-    border-bottom-width: 1px; }
+    border-bottom-width: 1px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem; }
+    .mobile-navigation ul > li a {
+      color: #c2c2c3;
+      line-height: 2;
+      display: block;
+      width: 100%; }
+  .mobile-navigation.open {
+    display: block; }
   @media (min-width: 765px) {
     .mobile-navigation {
       display: none; } }
@@ -513,7 +527,7 @@ a {
 .main-navigation a {
   display: block;
   text-decoration: none;
-  color: #c2c2c3;
+  color: #444;
   line-height: 4.5rem;
   transition: color 1s; }
   .main-navigation a:before {
@@ -525,8 +539,11 @@ a {
   content: none; }
 
 .menu-toggle-button {
-  margin: 0 auto;
-  display: none; }
+  position: absolute;
+  right: 2rem; }
+  @media (min-width: 765px) {
+    .menu-toggle-button {
+      display: none; } }
 
 .tiled-navigation {
   max-width: 1280px;
@@ -535,20 +552,45 @@ a {
     .tiled-navigation {
       display: none; } }
   .tiled-navigation ul {
+    min-height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch;
     list-style: none;
     margin: 0;
     padding-left: 0; }
     .tiled-navigation ul li {
       float: left;
-      display: block;
-      width: 25%;
-      padding-left: 0.4rem;
+      background-color: #fff;
+      border: 1px solid #444;
+      width: 23%;
+      margin-left: 3%;
       text-align: center; }
       .tiled-navigation ul li a {
         display: block;
-        width: 100%;
-        background-color: white;
-        border: 1px solid #444; }
+        width: 100%; }
       .tiled-navigation ul li .tiles-title {
         line-height: 2rem;
         text-decoration: none;
@@ -556,21 +598,33 @@ a {
         margin: 0;
         height: 2.5rem; }
       .tiled-navigation ul li .description {
-        color: gray;
+        color: #222;
         text-align: left;
-        font-size: 0.9rem;
+        font-weight: 500;
+        font-size: 0.7rem;
         margin: 1rem auto 2rem auto;
         width: 70%;
         padding-top: 1rem;
         border-top: 1px solid lightgray; }
 
-.wyjazdy .sjkp_page_icon {
+.sjkp_page_icon {
   height: 2.5rem;
   width: 2.5rem;
-  background-image: url("assets/wyjazdy_icon.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   margin: 2rem auto 0.5rem auto; }
+
+.wyjazdy .sjkp_page_icon {
+  background-image: url("assets/wyjazdy_icon.jpg"); }
+
+.terapia .sjkp_page_icon {
+  background-image: url("assets/terapia_icon.jpg"); }
+
+.szkola .sjkp_page_icon {
+  background-image: url("assets/szkola_icon.jpg"); }
+
+.szkolenia .sjkp_page_icon {
+  background-image: url("assets/szkolenia_icon.jpg"); }
 
 .menu-tiles {
   height: 16rem;
@@ -816,18 +870,23 @@ object {
   .content-area .site-main {
     margin: 0 0 0 25%; }
 
+.home {
+  background-color: #fff; }
+
 .site-footer {
   clear: both;
   width: 100%;
   min-height: 3rem;
   background-color: #303035; }
 
-.site-branding {
-  width: 30%;
-  float: left; }
-  @media (min-width: 1px) and (max-width: 764px) {
-    .site-branding {
-      float: none; } }
+@media (min-width: 1px) and (max-width: 764px) {
+  .site-branding {
+    float: none;
+    height: 2.3rem; } }
+@media (min-width: 765px) {
+  .site-branding {
+    max-width: 20%;
+    float: left; } }
 
 .site-content, .site-info {
   width: 90%;
@@ -850,14 +909,13 @@ object {
   margin: 0 auto;
   display: block; }
 
-.secondary-nav-wrapper {
-  background-color: #252525;
-  padding: 2rem 1rem; }
+@media (min-width: 765px) {
+  .secondary-nav-wrapper {
+    background-color: #252525;
+    padding: 2rem 1rem; } }
 
 .main-nav-wrapper {
-  min-height: 4.5rem;
-  max-width: 1280px;
-  padding: 0.5rem 1rem;
+  height: 4rem;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -874,11 +932,19 @@ object {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center; }
+  @media (min-width: 765px) {
+    .main-nav-wrapper {
+      min-height: 4.5rem;
+      max-width: 1280px;
+      padding: 0.5rem 1rem; } }
 
 .site-info {
+  margin-top: 2rem;
   background-color: #303035;
   color: #fafafa;
   box-shadow: none; }
+  .site-info h1, .site-info h2, .site-info h3, .site-info h4 {
+    margin-top: 0; }
   .site-info > div {
     width: 25%;
     float: left;
@@ -901,11 +967,8 @@ object {
   width: 25%; }
 
 .widget {
-  background-color: white;
   padding: 0.8rem;
-  border-radius: 6px;
-  margin-bottom: 1.5rem;
-  border: 1px solid lightgrey; }
+  margin-bottom: 1.5rem; }
 
 .widget-area ul {
   list-style: none;

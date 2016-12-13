@@ -2,7 +2,7 @@
 
 class sjkp_tiled_menu extends Walker_Nav_Menu {
   
-    
+    //the function responsible for displaying the current element we are on. In the case of menus, this means the <li> tag and the item's link.
     function start_el(&$output, $item, $depth=0, $args=array(), $id = 0) {
         
     	$object = $item->object;
@@ -30,10 +30,13 @@ class sjkp_tiled_menu extends Walker_Nav_Menu {
         //dodaj nazwę
          
       if(is_front_page() && $description != '' && $depth == 0 ) {
+        //usunąć str_replace ???
+        $description = str_replace(',',',<br>',$description);
         $output .= '<div class ="sjkp_page_icon"></div>';
         $output .= '<span class ="tiles-title">'. $title .'</span>';
       	$output .= '<p class="description">' . $description . '</p>';
       } else {
+          $output .= '<div class ="sjkp_page_icon top-right-icon"></div>';
           $output .= '<span class ="tiles-title">'. $title .'</span>';
       }
         
@@ -43,6 +46,7 @@ class sjkp_tiled_menu extends Walker_Nav_Menu {
       	$output .= '</span>';
       }
     }
+    
 }
        
 ?>
