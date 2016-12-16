@@ -252,15 +252,56 @@ h5,
 h6 {
   clear: both; }
 
+.entry-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 2rem; }
+
 .entry-title {
-  font-size: 3rem;
-  font-weight: 100;
+  font-size: 2.5rem;
+  display: inline-block;
   text-align: center;
-  color: gray;
-  padding: 1.5rem;
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-  background-color: #fcfcfc; }
+  font-weight: 300;
+  padding: 0.5rem; }
+
+.home .entry-title {
+  font-weight: bold;
+  margin-left: 1rem; }
+.home .entry-title-icon {
+  height: 4rem; }
+  @media (min-width: 765px) {
+    .home .entry-title-icon {
+      margin-left: -3rem;
+      margin-top: -1.5rem; } }
+
+.entry-title-icon {
+  height: 4.2rem;
+  margin-left: -2rem;
+  margin-top: -1rem; }
 
 .parent-title {
   font-size: 2rem;
@@ -278,6 +319,9 @@ h6 {
   align-items: center; }
   .parent-title_wrapper img {
     max-height: 60px; }
+
+html {
+  font-size: 16px; }
 
 p {
   margin-bottom: 1.5em; }
@@ -318,6 +362,11 @@ mark, ins {
 big {
   font-size: 125%; }
 
+.text__lead {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #666; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -330,9 +379,10 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
-body {
-  background: #f2f2f3;
-  /* Fallback for when there is no custom background color defined. */ }
+@media (min-width: 765px) {
+  body {
+    background: #e3e3e4;
+    /* Fallback for when there is no custom background color defined. */ } }
 
 blockquote, q {
   quotes: "" ""; }
@@ -347,10 +397,12 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 1em 0.2em;
+  padding-left: 0.75rem; }
 
 ul {
-  list-style: disc; }
+  list-style: disc;
+  list-style-image: url(assets/li_dot.svg); }
 
 ol {
   list-style: decimal; }
@@ -358,7 +410,7 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin-left: 0.5em; }
 
 dt {
   font-weight: bold; }
@@ -375,6 +427,29 @@ img {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+
+/*		SU Table overwrites
+---------------------------------------------------------------*/
+.site-main .entry-content .su-table table {
+  width: 100%;
+  margin: 1em 0 1.5em 0;
+  border-collapse: collapse;
+  font-size: 0.9em !important;
+  border: 1px solid #ccc; }
+.site-main .entry-content .su-table th {
+  text-align: center;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: normal;
+  color: #333;
+  border: 1px solid #ccc;
+  background: #f0f0f0; }
+.site-main .entry-content .su-table td {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  background: #fff; }
+.site-main .entry-content .su-table .su-even td {
+  background: #eeeef5 !important; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -461,13 +536,19 @@ a {
   color: royalblue;
   text-decoration: none; }
   a:visited {
-    color: purple; }
+    color: royalblue; }
   a:hover, a:focus, a:active {
     color: midnightblue; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+
+.breadcrumbs {
+  font-size: 0.8rem;
+  color: #404040; }
+  .breadcrumbs a {
+    color: royalblue; }
 
 @media (min-width: 1px) and (max-width: 764px) {
   .site-logo {
@@ -479,6 +560,9 @@ a {
   margin-bottom: 3.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px;
   background-color: #f2f2f3; }
+  @media (min-width: 765px) {
+    .site-header {
+      margin-bottom: 0.5rem; } }
 
 .mobile-navigation {
   width: 100%;
@@ -545,6 +629,10 @@ a {
     .menu-toggle-button {
       display: none; } }
 
+/*______________________________________________________________________________________________________________________
+
+NAWIGACJA KAFELKOWA
+_________________________________________________________________________________________________________________________*/
 .tiled-navigation {
   max-width: 1280px;
   margin: auto; }
@@ -585,53 +673,109 @@ a {
       float: left;
       background-color: #fff;
       border: 1px solid #444;
-      width: 23%;
-      margin-left: 3%;
-      text-align: center; }
+      width: 24%;
+      margin-left: 1%;
+      text-align: center;
+      transition: all 0.5s;
+      position: relative; }
+      .tiled-navigation ul li:first-child {
+        margin-left: 0%; }
+      .tiled-navigation ul li.current-page-ancestor, .tiled-navigation ul li.current-menu-item, .tiled-navigation ul li:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+        z-index: 999; }
       .tiled-navigation ul li a {
         display: block;
-        width: 100%; }
+        width: 100%;
+        height: 100%; }
       .tiled-navigation ul li .tiles-title {
-        line-height: 2rem;
+        line-height: 2.5rem;
         text-decoration: none;
         color: gray;
-        margin: 0;
+        margin-bottom: 0.5rem;
         height: 2.5rem; }
-      .tiled-navigation ul li .description {
-        color: #222;
-        text-align: left;
-        font-weight: 500;
-        font-size: 0.7rem;
-        margin: 1rem auto 2rem auto;
-        width: 70%;
-        padding-top: 1rem;
-        border-top: 1px solid lightgray; }
+  .tiled-navigation .description__home {
+    color: #111;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin: 1rem auto 2rem auto;
+    width: 70%;
+    padding-top: 1rem;
+    border-top: 1px solid lightgray; }
+  .tiled-navigation .description {
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+    text-align: left;
+    background-color: black;
+    opacity: 0;
+    transition: 0.4s opacity;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    z-index: -1; }
+    .tiled-navigation .description p {
+      color: #fff;
+      font: 1.4rem; }
+  .tiled-navigation li:hover .description {
+    opacity: 0.7; }
+
+.menu-tiles {
+  height: 16rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid lightgray;
+  transition: all .3s ease-in-out; }
+
+/*______________________________________________________________________________________________________________________
+
+NAWIGACJA KAFELKOWA NA S G┼ü├ôWNEJ
+_________________________________________________________________________________________________________________________*/
+.home .tiled-navigation {
+  max-width: 1400px; }
+  .home .tiled-navigation li {
+    opacity: 1; }
+  .home .tiled-navigation .menu-tiles {
+    height: 25rem; }
 
 .sjkp_page_icon {
   height: 2.5rem;
   width: 2.5rem;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 2rem auto 0.5rem auto; }
+  position: relative;
+  margin: -1.5rem auto 0.5rem auto;
+  z-index: 999; }
 
 .wyjazdy .sjkp_page_icon {
-  background-image: url("assets/wyjazdy_icon.jpg"); }
+  background-image: url("assets/icon_main-01.svg"); }
 
 .terapia .sjkp_page_icon {
-  background-image: url("assets/terapia_icon.jpg"); }
+  background-image: url("assets/icon_main-02.svg"); }
 
 .szkola .sjkp_page_icon {
-  background-image: url("assets/szkola_icon.jpg"); }
+  background-image: url("assets/icon_main-03.svg"); }
 
 .szkolenia .sjkp_page_icon {
-  background-image: url("assets/szkolenia_icon.jpg"); }
-
-.menu-tiles {
-  height: 16rem;
-  background-position: center;
-  background-size: cover;
-  border-bottom: 1px solid lightgray;
-  transition: height 1s; }
+  background-image: url("assets/icon_main-04.svg"); }
 
 .sticky .menu-tiles {
   height: 0; }
@@ -864,14 +1008,21 @@ object {
 # Layout
 --------------------------------------------------------------*/
 .content-area {
-  float: right;
-  margin: 0 0 5rem -25%;
   width: 100%; }
-  .content-area .site-main {
-    margin: 0 0 0 25%; }
+  @media (min-width: 765px) {
+    .content-area {
+      float: right;
+      margin: 0 0 5rem -25%; } }
+  @media (min-width: 765px) {
+    .content-area .site-main {
+      margin: 0 0 0 25%; } }
 
 .home {
   background-color: #fff; }
+  @media (min-width: 765px) {
+    .home .site-content, .home .site-info {
+      position: relative;
+      top: auto; } }
 
 .site-footer {
   clear: both;
@@ -888,20 +1039,28 @@ object {
     max-width: 20%;
     float: left; } }
 
+.page__thumbnail-wrapper {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid lightgray; }
+
 .site-content, .site-info {
   width: 90%;
-  max-width: 1280px;
+  max-width: 1380px;
   margin: 0 auto; }
+  @media (min-width: 765px) {
+    .site-content, .site-info {
+      background-color: #f2f2f3;
+      position: relative;
+      top: -3rem; } }
 
 .site-main {
   background-color: white; }
   @media (min-width: 765px) {
     .site-main {
-      padding: 1.5rem;
-      padding-left: 3rem; } }
+      padding: 3.5rem 4.2rem; } }
 
 .fullwidth-nav-wrapper {
-  background-color: #f4f4f4; }
+  background-color: #fefefe; }
 
 .main-nav-wrapper,
 .secondary-nav-wrapper {
@@ -912,7 +1071,7 @@ object {
 @media (min-width: 765px) {
   .secondary-nav-wrapper {
     background-color: #252525;
-    padding: 2rem 1rem; } }
+    padding: 3rem 1rem 5rem 1rem; } }
 
 .main-nav-wrapper {
   height: 4rem;
@@ -940,10 +1099,14 @@ object {
 
 .site-info {
   margin-top: 2rem;
+  top: 0;
   background-color: #303035;
   color: #fafafa;
   box-shadow: none; }
-  .site-info h1, .site-info h2, .site-info h3, .site-info h4 {
+  .site-info h1,
+  .site-info h2,
+  .site-info h3,
+  .site-info h4 {
     margin-top: 0; }
   .site-info > div {
     width: 25%;
@@ -963,31 +1126,35 @@ object {
 .site-content .widget-area, .site-info .widget-area {
   float: left;
   overflow: hidden;
-  padding: 0 1rem 1rem 1rem;
-  width: 25%; }
+  padding: 2rem 1.5rem 1rem 1.5rem; }
+  @media (min-width: 765px) {
+    .site-content .widget-area, .site-info .widget-area {
+      width: 25%; } }
 
 .widget {
   padding: 0.8rem;
   margin-bottom: 1.5rem; }
 
-.widget-area ul {
-  list-style: none;
-  margin: 0 0 1.5em 0;
-  padding: 0; }
-.widget-area .menu .current-menu-item a {
-  background-color: lightgray; }
-.widget-area .menu li {
-  text-align: center;
-  margin: 1rem 0; }
-  .widget-area .menu li a {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    width: 100%;
-    display: block;
-    padding: 0.3rem 0;
-    color: gray; }
-    .widget-area .menu li a:hover {
-      background-color: lightgray; }
+.widget-area {
+  font: 0.9rem; }
+  .widget-area ul {
+    position: relative;
+    list-style: none;
+    margin: 0 0 1.5em 0;
+    padding-left: 1rem;
+    border-left: 1px solid royalblue; }
+  .widget-area .menu .current-menu-item a:before {
+    content: '\2014';
+    position: absolute;
+    left: -0.1rem; }
+  .widget-area .menu li {
+    margin: 1rem 0; }
+    .widget-area .menu li a {
+      display: block;
+      padding: 0.3rem 0;
+      color: royalblue; }
+      .widget-area .menu li a:hover, .widget-area .menu li a:visited {
+        color: royalblue; }
 
 .page-id-86 .widget-area .menu a {
   color: #4b15ba; }

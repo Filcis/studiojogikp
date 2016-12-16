@@ -29,13 +29,21 @@ get_header(); ?>
                 // The Loop
                 if ( $query->have_posts() ) {
                     while ( $query->have_posts() ) {
-                        $query->the_post();
-                        the_content();
+                        $query->the_post(); 
+            ?>
+                <section>
+                    <?php
+                        the_post_thumbnail( 'full' );
+                        the_sjkp_wyjazdy_meta();
+                        the_excerpt(); 
+                            ?>
+                </section>
+                <?php
                     }
                 } else {
                 ?>
-                <p>nie ma jeszcze żadnych postów</p>
-                <?php
+                    <p>nie ma jeszcze żadnych postów</p>
+                    <?php
                 }
 
                 // Restore original Post Data

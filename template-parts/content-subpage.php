@@ -9,10 +9,6 @@
 
 ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="entry-header">
-            <?php
-            get_sjkp_subpage_icon();
-            the_title( '<h1 class="entry-title">', '</h1>' ); ?> </header>
         <!-- .entry-header -->
         <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
             <?php if(function_exists('bcn_display'))
@@ -20,6 +16,16 @@
         bcn_display();
     }?>
         </div>
+        <header class="entry-header">
+            <!--thumbnail z ikonką-->
+            <?php
+            get_sjkp_subpage_icon();
+            the_title( '<h1 class="entry-title">', '</h1>' ); ?> </header>
+        <?php if ( has_post_thumbnail() ) : ?>
+        <div class="page__thumbnail-wrapper">
+            <?php the_post_thumbnail(); ?>
+        </div>
+        <?php endif; ?>
         <div class="entry-content">
             <?php
 			the_content();

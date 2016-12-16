@@ -25,6 +25,11 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
+           <?php if ( has_post_thumbnail() ) : ?>
+        <div class="page__thumbnail-wrapper">
+            <?php the_post_thumbnail(); ?>
+        </div>
+        <?php endif; ?>
 
 	<div class="entry-content">
 		<?php

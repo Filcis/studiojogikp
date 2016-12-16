@@ -25,20 +25,24 @@ class sjkp_tiled_menu extends Walker_Nav_Menu {
             
             // Make the title just be the featured image.
             $thumb_image = wp_get_attachment_image_url( $thumb_id, 'poster');
-            $output .= '<div class="menu-tiles" style="background-image: url('. $thumb_image . ')"></div>';      
+            $output .= '<div class="menu-tiles" style="background-image: url('. $thumb_image . ')">';      
         }
         //dodaj nazwę
-         
-      if(is_front_page() && $description != '' && $depth == 0 ) {
-        //usunąć str_replace ???
+        if(is_front_page() && $description != '' && $depth == 0 ) { 
+        //na stronie głównej umieść opis w dolnej części kafelka
         $description = str_replace(',',',<br>',$description);
-        $output .= '<div class ="sjkp_page_icon"></div>';
+        $output .= '</div><div class ="sjkp_page_icon"></div>';
         $output .= '<span class ="tiles-title">'. $title .'</span>';
-      	$output .= '<p class="description">' . $description . '</p>';
-      } else {
-          $output .= '<div class ="sjkp_page_icon top-right-icon"></div>';
-          $output .= '<span class ="tiles-title">'. $title .'</span>';
-      }
+      	$output .= '<p class="description__home">' . $description . '</p>';
+        } elseif ($description != '' && $depth == 0) {
+        //na podstronach umieść opis na kafelku
+        $output .= '<div class="description"><p>' . $description . '</p></div>';
+        $output .= '</div><div class ="sjkp_page_icon"></div>';
+        $output .= '<span class ="tiles-title">'. $title .'</span>';
+        } else {
+        $output .= '</div><div class ="sjkp_page_icon"></div>';
+        $output .= '<span class ="tiles-title">'. $title .'</span>';
+        }
         
       if( $permalink && $permalink != '#' ) {
       	$output .= '</a>';
