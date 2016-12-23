@@ -13,6 +13,11 @@
             </nav>
         </div>
     </div>
+
+    <?php
+    do_action('studiojogikp_subpages-list');
+    ?>
+
     <!-- #site-navigation kafelki -->
     <div class="secondary-nav-wrapper clear">
         <nav id="secondary-site-navigation" class="tiled-navigation" role="navigation">

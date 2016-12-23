@@ -253,40 +253,45 @@ h6 {
   clear: both; }
 
 .entry-header {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
   border-bottom: 1px solid lightgray;
   margin-bottom: 2rem; }
+  @media (min-width: 765px) {
+    .entry-header {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center; } }
 
 .entry-title {
-  font-size: 2.5rem;
-  display: inline-block;
-  text-align: center;
-  font-weight: 300;
-  padding: 0.5rem; }
+  font-size: 1.5rem;
+  text-align: center; }
+  @media (min-width: 765px) {
+    .entry-title {
+      font-size: 2.5rem;
+      display: inline-block;
+      font-weight: 300;
+      padding: 0.5rem; } }
 
 .post-excerpt .entry-title {
   font-size: 1.4rem;
@@ -299,16 +304,24 @@ h6 {
   font-weight: bold;
   margin-left: 1rem; }
 .home .entry-title-icon {
-  height: 4rem; }
+  height: 4rem;
+  margin: 0 auto;
+  display: block; }
   @media (min-width: 765px) {
     .home .entry-title-icon {
+      display: inline;
       margin-left: -3rem;
       margin-top: -1.5rem; } }
 
 .entry-title-icon {
   height: 4.2rem;
-  margin-left: -2rem;
-  margin-top: -1rem; }
+  margin: 0 auto;
+  display: block; }
+  @media (min-width: 765px) {
+    .entry-title-icon {
+      display: inline;
+      margin-left: -2rem;
+      margin-top: -1rem; } }
 
 .parent-title {
   font-size: 2rem;
@@ -328,7 +341,10 @@ h6 {
     max-height: 60px; }
 
 html {
-  font-size: 16px; }
+  font-size: 14px; }
+  @media (min-width: 765px) {
+    html {
+      font-size: 16px; } }
 
 p {
   margin-bottom: 1.5em; }
@@ -574,53 +590,13 @@ a {
   max-height: 3.7rem; }
 
 .site-header {
+  position: relative;
   margin-bottom: 3.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px;
   background-color: #f2f2f3; }
   @media (min-width: 765px) {
     .site-header {
       margin-bottom: 0.5rem; } }
-
-.mobile-navigation {
-  width: 100%;
-  display: none;
-  background-color: #303035;
-  position: absolute;
-  width: 100%;
-  top: 4rem; }
-  .mobile-navigation ul {
-    list-style: none;
-    margin: 1rem 0;
-    padding: 1rem 3rem; }
-  .mobile-navigation ul > li {
-    border-bottom-color: #444;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem; }
-    .mobile-navigation ul > li a {
-      color: #c2c2c3;
-      line-height: 2;
-      display: block;
-      width: 100%; }
-  .mobile-navigation.open {
-    display: block; }
-  @media (min-width: 765px) {
-    .mobile-navigation {
-      display: none; } }
-
-@media (min-width: 765px) {
-  .mobile-subnav {
-    display: none; } }
-.mobile-subnav li {
-  display: inline-block;
-  float: left;
-  padding: 0.35rem;
-  border-radius: 0.25rem;
-  background-color: royalblue;
-  margin: .45rem; }
-  .mobile-subnav li a {
-    color: aliceblue; }
 
 .main-navigation {
   display: block;
@@ -834,6 +810,61 @@ ________________________________________________________________________________
   float: right;
   text-align: right;
   width: 50%; }
+
+/*______________________________________________________________________________________________________________________
+
+NAWIGACJA MOBILNA
+_________________________________________________________________________________________________________________________*/
+.mobile-navigation {
+  width: 100%;
+  display: none;
+  background-color: #303035;
+  position: absolute;
+  width: 100%;
+  top: 4rem;
+  z-index: 99999; }
+  .mobile-navigation ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 1rem 3rem; }
+  .mobile-navigation ul > li {
+    border-bottom-color: #444;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem; }
+    .mobile-navigation ul > li a {
+      color: #c2c2c3;
+      line-height: 2;
+      display: block;
+      width: 100%; }
+  .mobile-navigation.open {
+    display: block; }
+  @media (min-width: 765px) {
+    .mobile-navigation {
+      display: none; } }
+
+.mobile-subnav {
+  background-color: #23282d;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  color: white; }
+  .mobile-subnav h3 {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center; }
+  @media (min-width: 765px) {
+    .mobile-subnav {
+      display: none; } }
+  .mobile-subnav li {
+    display: inline-block;
+    float: left;
+    padding: 0.45rem 0.65rem 0.45rem  0.65rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    border-bottom: none;
+    background-color: #aaa;
+    margin: 0.45rem 0.45rem 0 0.45rem; }
+    .mobile-subnav li.current_page_item {
+      background-color: white; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1147,9 +1178,13 @@ object {
   .site-info h4 {
     margin-top: 0; }
   .site-info > div {
-    width: 25%;
-    float: left;
-    padding-right: 1.5rem; }
+    text-align: center; }
+    @media (min-width: 765px) {
+      .site-info > div {
+        text-align: left;
+        width: 25%;
+        float: left;
+        padding-right: 1.5rem; } }
   .site-info:last-child {
     padding-right: 0; }
   .site-info ul {

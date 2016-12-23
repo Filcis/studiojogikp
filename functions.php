@@ -142,7 +142,7 @@ add_action( 'widgets_init', 'studiojogikp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function studiojogikp_scripts() {
-    wp_enqueue_style('studiojogikp-font','https://fonts.googleapis.com/css?family=Hind') ;
+    wp_enqueue_style('studiojogikp-font','https://fonts.googleapis.com/css?family=Hind&subset=latin,latin-ext') ;
     
 	wp_enqueue_style( 'studiojogikp-style', get_stylesheet_uri() );
 
