@@ -31,12 +31,18 @@ get_header(); ?>
                     while ( $query->have_posts() ) {
                         $query->the_post(); 
             ?>
-                <section>
+                <section class="post-excerpt">
                     <?php
-                        the_post_thumbnail( 'full' );
+                        the_title( '<h1 class="entry-title">', '</h1>' );
+                        the_post_thumbnail( 'full' ); ?>
+                    <div class="post-meta-wrapper">
+                    <?php
                         the_sjkp_wyjazdy_meta();
                         the_excerpt(); 
                             ?>
+                        <a href="<?php echo get_permalink(); ?>"> więcej</a>
+                    </div>
+                    <div></div>
                 </section>
                 <?php
                     }

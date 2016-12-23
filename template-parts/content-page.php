@@ -20,6 +20,7 @@
                 <?php
             get_sjkp_subpage_icon();
              the_title( '<h1 class="entry-title">', '</h1>' ); ?> </header>
+        
                <?php if ( has_post_thumbnail() ) : ?>
         <div class="page__thumbnail-wrapper">
             <?php the_post_thumbnail(); ?>

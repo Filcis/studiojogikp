@@ -13,18 +13,18 @@
         });
 
 //przenieść funkcję do oddzielnego pliku | sticky sidebar    
-function sticky_relocate() {  
-    var window_top = $(window).scrollTop();  
-    var div_top = $('.widget-area__anchor').offset().top;  
-    if (window_top > div_top) {  
-        $('.widget-wrapper').addClass('sticky');  
-    } else {  
-        $('.widget-wrapper').removeClass('sticky');  
-    }  
-}
-    $(window).scroll(sticky_relocate);  
-    //na wypadek odświeżenia przeglądarki
-    sticky_relocate(); 
+//function sticky_relocate() {  
+//    var window_top = $(window).scrollTop();  
+//    var div_top = $('.widget-area__anchor').offset().top;  
+//    if (window_top > div_top) {  
+//        $('.widget-wrapper').addClass('sticky');  
+//    } else {  
+//        $('.widget-wrapper').removeClass('sticky');  
+//    }  
+//}
+//    $(window).scroll(sticky_relocate);  
+//    //na wypadek odświeżenia przeglądarki
+//    sticky_relocate(); 
     
 // __________________________wrapper function end    
 })(jQuery);

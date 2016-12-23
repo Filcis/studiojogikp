@@ -165,20 +165,27 @@ function sjkp_subpage_icon_html( $post) {
 	wp_nonce_field( '_sjkp_subpage_icon_nonce', 'sjkp_subpage_icon_nonce' ); ?>
                 <p>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_0" value="0" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '0' ); ?>>
-                    <label for="sjkp_subpage_icon_ikona_2">brak</label>
+                    <label for="sjkp_subpage_icon_ikona_0">brak</label>
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_1" value="1" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '1' ); ?>>
-                    <label for="sjkp_subpage_icon_ikona_0">szkoła jogi - początkujący</label>
+                    <label for="sjkp_subpage_icon_ikona_1">szkoła jogi - początkujący</label>
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_2" value="2" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '2' ); ?>>
-                    <label for="sjkp_subpage_icon_ikona_1">szkoła jogi - średniozaawansowani</label>
+                    <label for="sjkp_subpage_icon_ikona_2">szkoła jogi - średniozaawansowani</label>
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_3" value="3" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '3' ); ?>>
-                    <label for="sjkp_subpage_icon_ikona_2">cennik</label>
+                    <label for="sjkp_subpage_icon_ikona_3">cennik</label>
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_4" value="4" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '4' ); ?>>
-                    <label for="sjkp_subpage_icon_ikona_2">logo</label>
-                    <br> </p>
+                    <label for="sjkp_subpage_icon_ikona_4">kontakt</label>
+                    <br>
+                    <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_5" value="5" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '5' ); ?>>
+                    <label for="sjkp_subpage_icon_ikona_5">joga ciążowa</label>
+                    <br>
+                    <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_6" value="6" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '6' ); ?>>
+                    <label for="sjkp_subpage_icon_ikona_6">logo</label>
+                    <br>
+                </p>
                 <?php
 }
 
@@ -208,6 +215,12 @@ function the_sjkp_subpage_icon (){
         $output.= 'icon_3';
         break;
     case '4':
+        $output.= 'icon_4'; //kontakt
+        break;
+    case '5':
+        $output.= 'icon_5'; //ciąża
+        break;
+    case '6':
         $output.= 'logo_znak';
         break;
     }
@@ -225,8 +238,9 @@ function the_sjkp_wyjazdy_meta() {
     $termin = sjkp_get_meta( 'informacje_o_wyjedzie_termin_wyjazdu' );
     $miejsce = sjkp_get_meta( 'informacje_o_wyjedzie_miejsce' );
     $koszt = sjkp_get_meta( 'informacje_o_wyjedzie_koszt' );
+    $url = Get_template_directory_uri();
     ?>
-        <div class="post-meta"><p><?php echo $termin ?></p><p><?php echo $miejsce ?></p><p><?php echo $koszt ?></p></div>
+        <div class="post-meta"><p><?php echo '<img class="meta-icon" src="'.$url.'/assets/kalendarzn.svg">' . $termin . '<img class="meta-icon" src="'.$url.'/assets/lokalizacjan.svg">' . $miejsce .'<img class="meta-icon" src="'.$url.'/assets/kosztn.svg">'. $koszt ?></p></div>
 <?php
     
 }

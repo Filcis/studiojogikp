@@ -23,6 +23,11 @@ wp_redirect(get_permalink($firstchild->ID));
 
 get_header(); ?>
     <div id="primary" class="content-area">
+        <nav id="mobile-subnav" class="mobile-subnav clear">
+        <?php
+            do_action('studiojogikp_subpages-list');
+            ?>
+        </nav>
         <main id="main" class="site-main" role="main">
             <?php
 			while ( have_posts() ) : the_post();

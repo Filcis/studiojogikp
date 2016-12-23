@@ -23,4 +23,4 @@ if ( $children ) : ?>
     </ul>
     <?php endif;
 }
-add_action('studiojogikp_before_sidebar','studiojogikp_subpages');
+add_action('studiojogikp_subpages-list','studiojogikp_subpages');

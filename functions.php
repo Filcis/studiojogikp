@@ -42,7 +42,6 @@ function studiojogikp_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'studiojogikp' ),
         'secondary' => esc_html__( 'Kafelki', 'studiojogikp' ),
@@ -189,8 +188,14 @@ require get_template_directory() . '/inc/studiojogikp_posttypes.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * SJKP specific
+ */
+
 require get_template_directory() . '/inc/sjkp_tiled_menu.php';
 
 require get_template_directory() . '/inc/metaboxes.php';
 
 require get_template_directory() . '/inc/sjkp_shortcodes.php';
+
+require get_template_directory() . '/inc/sjkp_subpages.php';
