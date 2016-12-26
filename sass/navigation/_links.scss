@@ -1,0 +1,30 @@
+a {
+    color: $color__link;
+    &:visited {
+        color: $color__link-visited;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color__link-hover;
+    }
+    &:focus {
+        outline: thin dotted;
+    }
+    &:hover,
+    &:active {
+        outline: 0;
+    }
+    text-decoration: none;
+}
+
+.breadcrumbs {
+    @include mq('small'){
+        display: none;
+    }
+    font-size: 0.8rem;
+    color: $color__text-main;
+    a {
+        color: $color__link;
+    }
+}

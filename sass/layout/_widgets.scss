@@ -1,0 +1,56 @@
+.site-content .widget-area {
+    float: left;
+    overflow: hidden;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    @include mq('from-medium'){
+    width: $size__site-sidebar;
+    }
+    //    background-color: $color__background-sidebar;
+}
+
+.widget {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.widget-area {
+    font: 0.9rem;
+    ul {
+        position: relative;
+        list-style: none;
+        margin: 0 0 1.5em 0;
+        padding-left: 1rem;
+        border-left: 1px solid $color__link;
+    }
+    .menu {
+        .current-menu-item a {
+            &:before {
+                content: '\2014';
+                position: absolute;
+                left: -0.1rem;
+            }
+        }
+        li {
+            margin: 1rem 0;
+            a {
+                display: block;
+                padding: 0.3rem 0;
+                color: $color__link;
+                &:hover, &:visited {
+                    color: $color__link;
+                }
+            }
+        }
+    }
+}
+.widget-wrapper.sticky {
+//    position: fixed;
+//    top: 0;
+//    width: inherit;
+}
+
+.page-id-86 .widget-area .menu {
+    a {
+        color: desaturate($indigo, 20);
+    }
+}

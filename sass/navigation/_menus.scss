@@ -1,0 +1,351 @@
+.site-logo {
+    @include mq('small') {
+        margin-left: 2rem;
+    }
+    img {
+        max-height: 3.7rem;
+    }
+}
+
+.site-header {
+    position: relative;
+    margin-bottom: 3.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px;
+    background-color: $color__background-header;
+    @include mq('from-medium') {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.main-navigation {
+    @include mq('small') {
+        display: none;
+    }
+    display: block;
+    float: right;
+    margin-left: auto;
+}
+
+.main-navigation {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+    li {
+        float: left;
+        margin-left: 1.5rem;
+        position: relative;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        color: $color__link-mainmenu;
+        line-height: 4.5rem;
+        transition: color 1s;
+        &:before {
+            content: '\00B7';
+            padding-right: 1.5rem;
+        }
+        &:hover {
+            color: $color__link-mainmenu__hover;
+        }
+    }
+    li:first-child a:before {
+        content: none;
+    }
+}
+
+
+
+/*______________________________________________________________________________________________________________________
+
+NAWIGACJA KAFELKOWA
+_________________________________________________________________________________________________________________________*/
+
+.tiled-navigation {
+    @include mq('small') {
+        display: none;
+    }
+    max-width: 1280px;
+    margin: auto;
+    ul {
+        min-height: 100%;
+        @include mq('from-medium') {
+            @include display(flex);
+            @include justify-content(space-between);
+            @include align-items(stretch);
+        }
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        li {
+            float: left;
+            background-color: #fff;
+            border: 1px solid #444;
+            width: 24%;
+            margin-left: 1%;
+            text-align: center;
+            //            opacity: 0.8;
+            transition: all 0.5s;
+            position: relative;
+            &:first-child {
+                margin-left: 0%;
+            }
+            &.current-page-ancestor,
+            &.current-menu-item,
+            &:hover {
+                //                opacity: 1;
+                @include transform(scale(1.05));
+                z-index: 999;
+            }
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .tiles-title {
+                line-height: 2.50rem;
+                text-decoration: none;
+                color: $color__link-tiles;
+                margin-bottom: 0.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+    .description__home {
+        //p z opisem strony, na glownej
+        color: #111;
+        text-align: left;
+        font-weight: 500;
+        font-size: 0.8rem;
+        margin: 1rem auto 2rem auto;
+        width: 70%;
+        padding-top: 1rem;
+        border-top: 1px solid lightgray;
+    }
+    .description {
+        height: 100%;
+        color: #fff !important;
+        margin: auto;
+        padding: 1rem;
+        text-align: left;
+        background-color: black;
+        opacity: 0;
+        transition: 0.4s opacity;
+        @include display(flex);
+        @include align-items(center);
+        z-index: -1;
+        p {
+            color: #fff;
+            font: 1.4rem;
+        }
+    }
+    li:hover .description {
+        opacity: 0.7;
+    }
+}
+
+.menu-tiles {
+    height: 16rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid lightgray;
+    transition: all .3s ease-in-out;
+}
+
+
+/*______________________________________________________________________________________________________________________
+
+NAWIGACJA KAFELKOWA NA S GŁÓWNEJ
+_________________________________________________________________________________________________________________________*/
+
+.home .tiled-navigation {
+    max-width: 1400px;
+    ul {}
+    li {
+        opacity: 1;
+    }
+    .menu-tiles {
+        @include mq('from-medium') {
+            height: 25rem;
+        }
+    }
+    //style responsywne
+    @include mq('small') {
+        display: block;
+    }
+    li {
+        width: 100%;
+    }
+}
+
+.sjkp_page_icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: -1.5rem auto 0.5rem auto;
+    z-index: 999;
+}
+
+.wyjazdy .sjkp_page_icon {
+    background-image: url('assets/icon_main-01.svg');
+}
+
+.terapia .sjkp_page_icon {
+    background-image: url('assets/icon_main-02.svg');
+}
+
+.szkola .sjkp_page_icon {
+    background-image: url('assets/icon_main-03.svg');
+}
+
+.szkolenia .sjkp_page_icon {
+    background-image: url('assets/icon_main-04.svg');
+}
+
+.sticky .menu-tiles {
+    height: 0;
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+    .site-main & {
+        margin: 0 0 1.5em;
+        overflow: hidden;
+    }
+    .nav-previous {
+        float: left;
+        width: 50%;
+    }
+    .nav-next {
+        float: right;
+        text-align: right;
+        width: 50%;
+    }
+}
+
+
+/*______________________________________________________________________________________________________________________
+
+NAWIGACJA MOBILNA
+_________________________________________________________________________________________________________________________*/
+
+.mobile-navigation {
+    width: 100%;
+    display: none; //domyślnie ukryta
+    background-color: $color__background-mobilemenu;
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+    z-index: 99999;
+    ul {
+        list-style: none;
+        margin: 1rem 0;
+        padding: 1rem 3rem;
+    }
+    ul > li {
+        border-bottom-color: #444;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        a {
+            color: $color__link-mobilemenu;
+            line-height: 2;
+            display: block;
+            width: 100%;
+        }
+    }
+    &.open {
+        display: block;
+    }
+    @include mq('from-medium') {
+        display: none;
+    }
+}
+
+//'hamburger'
+
+.menu-toggle-button {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 30px;
+    font-size: 0;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    &:focus {
+        outline: none;
+    }
+    position: absolute;
+    right: 2rem;
+    @include mq('from-medium') {
+        display: none;
+    }
+}
+
+.menu-toggle-button span {
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 3px;
+  right: 3px;
+  height: 4px;
+  background: #333;
+}
+
+.menu-toggle-button span::before,
+.menu-toggle-button span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  content: "";
+}
+
+.menu-toggle-button span::before {
+  top: -10px;
+}
+
+.menu-toggle-button span::after {
+  bottom: -10px;
+}
+
+.mobile-subnav {
+    background-color: $color__background-mobilesubmenu;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    color: white;
+    h3 {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    @include mq('from-medium') {
+        display: none;
+    }
+    li {
+        display: inline-block;
+        float: left;
+        padding: 0.45rem 0.65rem 0.45rem 0.65rem;
+        border-radius: 0.25rem 0.25rem 0 0;
+        border-bottom: none;
+        background-color: #aaa;
+        margin: 0.45rem 0.45rem 0 0.45rem;
+        &.current_page_item {
+            background-color: white;
+        }
+    }
+}

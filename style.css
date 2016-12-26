@@ -628,13 +628,6 @@ a {
 .main-navigation li:first-child a:before {
   content: none; }
 
-.menu-toggle-button {
-  position: absolute;
-  right: 2rem; }
-  @media (min-width: 765px) {
-    .menu-toggle-button {
-      display: none; } }
-
 /*______________________________________________________________________________________________________________________
 
 NAWIGACJA KAFELKOWA
@@ -700,7 +693,7 @@ ________________________________________________________________________________
         width: 100%;
         height: 100%; }
       .tiled-navigation ul li .tiles-title {
-        line-height: 2.5rem;
+        line-height: 2.50rem;
         text-decoration: none;
         color: gray;
         margin-bottom: 0.5rem;
@@ -716,6 +709,7 @@ ________________________________________________________________________________
     border-top: 1px solid lightgray; }
   .tiled-navigation .description {
     height: 100%;
+    color: #fff !important;
     margin: auto;
     padding: 1rem;
     text-align: left;
@@ -844,6 +838,53 @@ ________________________________________________________________________________
     .mobile-navigation {
       display: none; } }
 
+.menu-toggle-button {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 30px;
+  font-size: 0;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  position: absolute;
+  right: 2rem; }
+  .menu-toggle-button:focus {
+    outline: none; }
+  @media (min-width: 765px) {
+    .menu-toggle-button {
+      display: none; } }
+
+.menu-toggle-button span {
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 3px;
+  right: 3px;
+  height: 4px;
+  background: #333; }
+
+.menu-toggle-button span::before,
+.menu-toggle-button span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  content: ""; }
+
+.menu-toggle-button span::before {
+  top: -10px; }
+
+.menu-toggle-button span::after {
+  bottom: -10px; }
+
 .mobile-subnav {
   background-color: #23282d;
   padding: 0.5rem 0.5rem 0 0.5rem;
@@ -858,7 +899,7 @@ ________________________________________________________________________________
   .mobile-subnav li {
     display: inline-block;
     float: left;
-    padding: 0.45rem 0.65rem 0.45rem  0.65rem;
+    padding: 0.45rem 0.65rem 0.45rem 0.65rem;
     border-radius: 0.25rem 0.25rem 0 0;
     border-bottom: none;
     background-color: #aaa;

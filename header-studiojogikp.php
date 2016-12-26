@@ -3,7 +3,7 @@
         <div class="main-nav-wrapper clear">
             <div class="site-branding"> <a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                                 <img alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_template_directory_uri() . '/assets/logo poziom.png' ?>"></a> </div>
-            <button class="menu-toggle-button">menu<div class="patty"></div></button>
+            <button class="menu-toggle-button"><span>menu</span>menu</button>
             <!-- .site-branding -->
             <nav id="site-navigation" class="main-navigation" role="navigation">
                 <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
