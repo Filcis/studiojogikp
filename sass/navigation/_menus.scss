@@ -169,6 +169,9 @@ ________________________________________________________________________________
     }
     .menu-tiles {
         @include mq('from-medium') {
+            height: 18rem;
+        }
+        @include mqh() {
             height: 25rem;
         }
     }

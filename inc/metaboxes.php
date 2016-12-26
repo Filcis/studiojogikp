@@ -132,14 +132,14 @@ function prowadzcy_html( $post) {
                         <?php _e( 'imię i nazwisko', 'prowadzcy' ); ?>
                     </label>
                     <br>
-                    <input type="text" name="prowadzcy_imi_i_nazwisko" id="prowadzcy_imi_i_nazwisko" value="<?php echo prowadzcy_get_meta( 'prowadzcy_imi_i_nazwisko' ); ?>"> </p>
+                    <input type="text" name="prowadzcy_imi_i_nazwisko" id="prowadzcy_imi_i_nazwisko" value="<?php echo sjkp_get_meta( 'prowadzcy_imi_i_nazwisko' ); ?>"> </p>
                 <p>
                     <label for="prowadzcy_o_prowadzcym">
                         <?php _e( 'o prowadzącym', 'prowadzcy' ); ?>
                     </label>
                     <br>
                     <textarea name="prowadzcy_o_prowadzcym" id="prowadzcy_o_prowadzcym">
-                        <?php echo prowadzcy_get_meta( 'prowadzcy_o_prowadzcym' ); ?>
+                        <?php echo sjkp_get_meta( 'prowadzcy_o_prowadzcym' ); ?>
                     </textarea>
                 </p>
             </div>
@@ -184,8 +184,7 @@ function sjkp_subpage_icon_html( $post) {
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_6" value="6" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '6' ); ?>>
                     <label for="sjkp_subpage_icon_ikona_6">logo</label>
-                    <br>
-                </p>
+                    <br> </p>
                 <?php
 }
 
@@ -228,19 +227,54 @@ function the_sjkp_subpage_icon (){
     return $output;
 }
 }
+
+
+//Zwracanie wartości metaboxów___________________________________________________________________________________________________________________
+
     function get_sjkp_subpage_icon (){
         if (the_sjkp_subpage_icon ()){
         echo the_sjkp_subpage_icon ();
         }
     }
 
-function the_sjkp_wyjazdy_meta() {
-    $termin = sjkp_get_meta( 'informacje_o_wyjedzie_termin_wyjazdu' );
-    $miejsce = sjkp_get_meta( 'informacje_o_wyjedzie_miejsce' );
-    $koszt = sjkp_get_meta( 'informacje_o_wyjedzie_koszt' );
+function the_sjkp_meta($meta) {
     $url = Get_template_directory_uri();
-    ?>
-        <div class="post-meta"><p><?php echo '<img class="meta-icon" src="'.$url.'/assets/kalendarzn.svg">' . $termin . '<img class="meta-icon" src="'.$url.'/assets/lokalizacjan.svg">' . $miejsce .'<img class="meta-icon" src="'.$url.'/assets/kosztn.svg">'. $koszt ?></p></div>
-<?php
-    
+//    $output ='';
+    if ($meta === 'wyjazdy'){
+        $termin = sjkp_get_meta( 'informacje_o_wyjedzie_termin_wyjazdu' );
+        $miejsce = sjkp_get_meta( 'informacje_o_wyjedzie_miejsce' );
+        $koszt = sjkp_get_meta( 'informacje_o_wyjedzie_koszt' );
+        //sprawdz czy którakolwiek zmienna posiada wartość:
+        if (!empty($termin) || !empty($miejsce) || !empty($koszt)){
+                  $output = '<div class="post-meta"><p>' ;
+            if (!empty($termin)){
+                $output.= '<img class="meta-icon" src="'.$url.'/assets/kalendarzn.svg">'. $termin;
+            }
+            if (!empty($miejsce)){
+                $output.=  '<img class="meta-icon" src="'.$url.'/assets/lokalizacjan.svg">' . $miejsce;
+            }
+            if (!empty($koszt)){
+                $output.=  '<img class="meta-icon" src="'.$url.'/assets/kosztn.svg">'. $koszt;
+            }
+            $output.= '</p></div>';  
+        }
+    } elseif ($meta === 'szkolenia'){
+        $termin = sjkp_get_meta( 'informacje_o_szkoleniu_termin_wyjazdu' );
+        $miejsce = sjkp_get_meta( 'informacje_o_szkoleniu_miejsce' );
+        $koszt = sjkp_get_meta( 'informacje_o_szkoleniu_cena' );
+        if (!empty($termin) || !empty($miejsce) || !empty($koszt)){
+                  $output = '<div class="post-meta"><p>' ;
+            if (!empty($termin)){
+                $output.= '<img class="meta-icon" src="'.$url.'/assets/kalendarzn.svg">'. $termin;
+            }
+            if (!empty($miejsce)){
+                $output.=  '<img class="meta-icon" src="'.$url.'/assets/lokalizacjan.svg">' . $miejsce;
+            }
+            if (!empty($koszt)){
+                $output.=  '<img class="meta-icon" src="'.$url.'/assets/kosztn.svg">'. $koszt;
+            }
+            $output.= '</p></div>';  
+        }
+    }
+    return $output;
 }

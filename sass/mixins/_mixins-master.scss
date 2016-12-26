@@ -52,6 +52,12 @@
     }
 }
 
+@mixin mqh() {
+    @media (min-height: 45rem) {
+            @content;
+        }
+}
+
 .hide-on-mobile {
     @include mq(990px) {
         display: none;

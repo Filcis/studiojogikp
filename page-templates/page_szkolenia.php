@@ -29,10 +29,24 @@ get_header(); ?>
                 // The Loop
                 if ( $query->have_posts() ) {
                     while ( $query->have_posts() ) {
-                        $query->the_post();
-                        the_content();
-                    }
-                } else {
+                        $query->the_post(); 
+            ?>
+                <section class="post-excerpt">
+                    <?php
+                        the_title( '<h1 class="entry-title">', '</h1>' );
+                        the_post_thumbnail( 'full' ); ?>
+                    <div class="post-meta-wrapper">
+                    <?php
+                        echo the_sjkp_meta('szkolenia');
+                        the_excerpt(); 
+                            ?>
+                        <a href="<?php echo get_permalink(); ?>"> więcej</a>
+                    </div>
+                    <div></div>
+                </section>
+                <?php
+                    } //endwhile
+                }  else {
                 ?>
                 <p>nie ma jeszcze żadnych postów</p>
                 <?php
@@ -46,4 +60,5 @@ get_header(); ?>
     </div>
     <!-- #primary -->
     <?php
+get_sidebar();
 get_footer();

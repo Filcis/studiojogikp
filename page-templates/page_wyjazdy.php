@@ -37,7 +37,7 @@ get_header(); ?>
                         the_post_thumbnail( 'full' ); ?>
                     <div class="post-meta-wrapper">
                     <?php
-                        the_sjkp_wyjazdy_meta();
+                        echo the_sjkp_meta('wyjazdy');
                         the_excerpt(); 
                             ?>
                         <a href="<?php echo get_permalink(); ?>"> więcej</a>

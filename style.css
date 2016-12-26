@@ -315,8 +315,10 @@ h6 {
 
 .entry-title-icon {
   height: 4.2rem;
-  margin: 0 auto;
   display: block; }
+  @media (min-width: 1px) and (max-width: 764px) {
+    .entry-title-icon {
+      margin: 0 auto; } }
   @media (min-width: 765px) {
     .entry-title-icon {
       display: inline;
@@ -756,6 +758,9 @@ ________________________________________________________________________________
   .home .tiled-navigation li {
     opacity: 1; }
   @media (min-width: 765px) {
+    .home .tiled-navigation .menu-tiles {
+      height: 18rem; } }
+  @media (min-height: 45rem) {
     .home .tiled-navigation .menu-tiles {
       height: 25rem; } }
   @media (min-width: 1px) and (max-width: 764px) {
