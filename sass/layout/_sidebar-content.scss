@@ -78,6 +78,28 @@
     }
 }
 
+//.article-header-strip {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    height: .30rem;
+//    background-color: #eee; //default color
+//}
+//
+//.parent-pageid-13 .article-header-strip {
+//    background-color: $cobalt;
+//}
+//.parent-pageid-13 .article-header-strip {
+//    background-color: $turquoise;
+//}
+//.parent-pageid-13 .article-header-strip {
+//    background-color: $violet;
+//}
+//.page-template-page_szkolenia .article-header-strip {
+//    background-color: $indigo;
+//}
+
 .main-nav-wrapper,
 .secondary-nav-wrapper {
     width: 100%;
@@ -93,7 +115,7 @@
 }
 
 .main-nav-wrapper {
-    height: 5rem;
+    height: 5.5rem;
     @include mq('small') {}
     @include mq('from-medium') {
         min-height: 4.5rem;

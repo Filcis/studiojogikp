@@ -7,6 +7,13 @@ function sjkp_lead_shortcode( $atts , $content = null ) {
 }
 add_shortcode( 'sjkp_lead', 'sjkp_lead_shortcode' );
 
+//uwagi w tekście
+function sjkp_warning_shortcode( $atts , $content = null ) {
+    $output = '<div class="entry-content__warning">' . do_shortcode($content) . '</div>';
+    return $output;
+}
+add_shortcode( 'sjkp_uwaga', 'sjkp_warning_shortcode' );
+
 //sekcje z ikonami
 function sjkp_section_shortcode( $atts = [], $content = null ) {
     

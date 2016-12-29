@@ -367,7 +367,7 @@ html {
       font-size: 16px; } }
 
 p {
-  margin: 0.5em 0; }
+  margin: 0 0 1rem; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -415,6 +415,13 @@ big {
   padding: 2rem;
   background-color: #eee;
   color: #222; }
+
+.entry-content__warning {
+  font-size: 1.2rem;
+  padding: 2rem;
+  border: 1px solid #eee;
+  width: 90%;
+  margin: 0 auto  0.75rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -1264,7 +1271,7 @@ object {
     padding: 3rem 1rem 5rem 1rem; } }
 
 .main-nav-wrapper {
-  height: 5rem;
+  height: 5.5rem;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1369,6 +1376,6 @@ object {
         color: royalblue; }
 
 .page-id-86 .widget-area .menu a {
-  color: #4b15ba; }
+  color: #747dc4; }
 
 /*# sourceMappingURL=style.css.map */

@@ -183,7 +183,10 @@ function sjkp_subpage_icon_html( $post) {
                     <label for="sjkp_subpage_icon_ikona_5">joga ciążowa</label>
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_6" value="6" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '6' ); ?>>
-                    <label for="sjkp_subpage_icon_ikona_6">logo</label>
+                    <label for="sjkp_subpage_icon_ikona_6">harmonogram</label>
+                    <br> </p>
+                    <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_7" value="7" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '7' ); ?>>
+                    <label for="sjkp_subpage_icon_ikona_7">logo</label>
                     <br> </p>
                 <?php
 }
@@ -205,21 +208,25 @@ function the_sjkp_subpage_icon (){
     $output= '<img class="entry-title-icon" src="'. get_stylesheet_directory_uri() .'/assets/';    
     switch ($icon_value) {
     case '1':
-        $output.= 'icon_1';
+        $output.= 'icon_poczatkujacy';
         break;
     case '2':
-        $output.= 'icon_2';
+        $output.= 'icon_sredniozaawansowani';
         break;
     case '3':
-        $output.= 'icon_3';
+        $output.= 'icon_cennik';
         break;
     case '4':
-        $output.= 'icon_4'; //kontakt
+        $output.= 'icon_kontakt';
         break;
     case '5':
-        $output.= 'icon_5'; //ciąża
+        $output.= 'icon_ciaza';
         break;
     case '6':
+        $output.= 'icon_harmonogram';
+        break;
+    }
+            case '7':
         $output.= 'logo_znak';
         break;
     }
