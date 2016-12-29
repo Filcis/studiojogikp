@@ -66,10 +66,16 @@
     @include mq('from-medium') {
         padding: 3.5rem 4.2rem;
     }
+    @include mq('large') {
+        padding: 3.5rem 7rem;
+    }
 }
 
 .fullwidth-nav-wrapper {
-    background-color: $color__nav-wrapper-background;
+    background-color: #f3f3f3;
+    @include mq('from-medium') {
+        background-color: $color__nav-wrapper-background;
+    }
 }
 
 .main-nav-wrapper,
@@ -87,7 +93,7 @@
 }
 
 .main-nav-wrapper {
-    height: 4rem;
+    height: 5rem;
     @include mq('small') {}
     @include mq('from-medium') {
         min-height: 4.5rem;
@@ -139,9 +145,23 @@
     }
 }
 
+.entry-content__icon {
+    position: absolute;
+    left: -2.5rem;
+    min-height: 2.5rem;
+}
+
+.entry-content__section {
+    margin-bottom: 1rem;
+}
+.entry-content__section-title {
+    position: relative;
+}
+
 .post-excerpt {
     margin: 1rem 0;
     border: 1px solid lightgray;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.25);
     //rezem z zajawką
     .post-meta-wrapper {
         padding: 1.5rem;

@@ -13,12 +13,13 @@
  */
 
 /*
-Go to first child if any
+Go to first child if any and content is not empty
 */
+
 $childpages = get_pages("child_of=".$post->ID."&sort_column=menu_order");
-if ($childpages) {
-$firstchild = $childpages[0];
-wp_redirect(get_permalink($firstchild->ID));
+if ($childpages && $post->post_content=="") {
+    $firstchild = $childpages[0];
+    wp_redirect(get_permalink($firstchild->ID));
 }
 
 get_header(); ?>

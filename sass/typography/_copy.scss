@@ -6,7 +6,7 @@ html {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin: 0.5em 0;
 }
 
 dfn, cite, em, i {
@@ -15,6 +15,10 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0 1.5em;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: #fafafc;
+    font-style: italic;
 }
 
 address {
@@ -51,8 +55,10 @@ big {
 	font-size: 125%;
 }
 
-.text__lead {
-    font-size: 1.2rem;
+.entry-content__lead {
+    font-size: 1rem;
     font-style: italic;
+    padding: 2rem;
+    background-color: $color__background-lead;
     color: $color__text-lead;
 }

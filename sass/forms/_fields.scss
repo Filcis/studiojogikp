@@ -19,6 +19,7 @@ textarea {
 	border-radius: 3px;
 	padding: 3px;
     width: 100%;
+    margin-bottom: 1rem;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -32,4 +33,32 @@ select {
 textarea {
 	max-width: 100%;
     resize: vertical;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1rem;
+    background-color: #999;
+    border-radius: 0.6rem;
+    box-shadow: none;
+    padding: 0.7rem 2rem;
+    &:hover {
+		border-color: $color__border-button-hover;
+		box-shadow: none;
+        background-color: #555;
+	}    
+}
+
+.entry-content {
+    form {
+        padding: 2.5rem 3rem 1.75rem;
+        background-color: $color__background-form;
+        border-radius: 1rem;
+        -webkit-box-shadow: 5px 5px 9px 0px rgba(185,188,199,1);
+        -moz-box-shadow: 5px 5px 9px 0px rgba(185,188,199,1);
+        box-shadow: 5px 5px 9px 0px rgba(185,188,199,1);
+        margin: 1.5rem 0;
+    }
 }

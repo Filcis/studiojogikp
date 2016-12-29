@@ -246,7 +246,7 @@ function the_sjkp_meta($meta) {
         $koszt = sjkp_get_meta( 'informacje_o_wyjedzie_koszt' );
         //sprawdz czy którakolwiek zmienna posiada wartość:
         if (!empty($termin) || !empty($miejsce) || !empty($koszt)){
-                  $output = '<div class="post-meta"><p>' ;
+                $output = '<div class="post-meta"><p>' ;
             if (!empty($termin)){
                 $output.= '<img class="meta-icon" src="'.$url.'/assets/kalendarzn.svg">'. $termin;
             }
@@ -259,7 +259,7 @@ function the_sjkp_meta($meta) {
             $output.= '</p></div>';  
         }
     } elseif ($meta === 'szkolenia'){
-        $termin = sjkp_get_meta( 'informacje_o_szkoleniu_termin_wyjazdu' );
+        $termin = sjkp_get_meta( 'informacje_o_szkoleniu_termin_szkolenia' );
         $miejsce = sjkp_get_meta( 'informacje_o_szkoleniu_miejsce' );
         $koszt = sjkp_get_meta( 'informacje_o_szkoleniu_cena' );
         if (!empty($termin) || !empty($miejsce) || !empty($koszt)){

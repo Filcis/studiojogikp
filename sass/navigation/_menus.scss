@@ -57,7 +57,6 @@
 }
 
 
-
 /*______________________________________________________________________________________________________________________
 
 NAWIGACJA KAFELKOWA
@@ -86,8 +85,7 @@ ________________________________________________________________________________
             width: 24%;
             margin-left: 1%;
             text-align: center;
-            //            opacity: 0.8;
-            transition: all 0.5s;
+            transition: all 0.5s ease-in-out;
             position: relative;
             &:first-child {
                 margin-left: 0%;
@@ -103,6 +101,9 @@ ________________________________________________________________________________
                 display: block;
                 width: 100%;
                 height: 100%;
+                &:hover {
+                    color: #fff;
+                }
             }
             .tiles-title {
                 line-height: 2.50rem;
@@ -163,11 +164,11 @@ ________________________________________________________________________________
 
 .home .tiled-navigation {
     max-width: 1400px;
-    ul {}
     li {
         opacity: 1;
     }
     .menu-tiles {
+        height: 300px;
         @include mq('from-medium') {
             height: 18rem;
         }
@@ -178,6 +179,9 @@ ________________________________________________________________________________
     //style responsywne
     @include mq('small') {
         display: block;
+        li {
+            margin-bottom: 1rem;
+        }
     }
     li {
         width: 100%;
@@ -273,7 +277,6 @@ ________________________________________________________________________________
 }
 
 //'hamburger'
-
 .menu-toggle-button {
     display: block;
     overflow: hidden;
@@ -299,32 +302,32 @@ ________________________________________________________________________________
 }
 
 .menu-toggle-button span {
-  display: block;
-  position: absolute;
-  top: 14px;
-  left: 3px;
-  right: 3px;
-  height: 4px;
-  background: #333;
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 3px;
+    right: 3px;
+    height: 4px;
+    background: #333;
 }
 
 .menu-toggle-button span::before,
 .menu-toggle-button span::after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #333;
-  content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    content: "";
 }
 
 .menu-toggle-button span::before {
-  top: -10px;
+    top: -10px;
 }
 
 .menu-toggle-button span::after {
-  bottom: -10px;
+    bottom: -10px;
 }
 
 .mobile-subnav {
