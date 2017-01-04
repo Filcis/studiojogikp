@@ -183,10 +183,10 @@ function sjkp_subpage_icon_html( $post) {
                     <label for="sjkp_subpage_icon_ikona_5">joga ciążowa</label>
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_6" value="6" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '6' ); ?>>
-                    <label for="sjkp_subpage_icon_ikona_6">harmonogram</label>
-                    <br> </p>
+                    <label for="sjkp_subpage_icon_ikona_6">logo</label>
+                    <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_7" value="7" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '7' ); ?>>
-                    <label for="sjkp_subpage_icon_ikona_7">logo</label>
+                    <label for="sjkp_subpage_icon_ikona_7">harmonogram</label>
                     <br> </p>
                 <?php
 }
@@ -223,16 +223,16 @@ function the_sjkp_subpage_icon (){
         $output.= 'icon_ciaza';
         break;
     case '6':
-        $output.= 'icon_harmonogram';
-        break;
-    }
-            case '7':
         $output.= 'logo_znak';
         break;
+    case '7':
+        $output.= 'icon_harmonogram';
+    break;
     }
-        $output.= '.svg">';
+                $output.= '.svg">';
+    }
+
     return $output;
-}
 }
 
 

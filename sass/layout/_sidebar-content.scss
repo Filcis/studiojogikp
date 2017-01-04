@@ -116,14 +116,16 @@
 
 .main-nav-wrapper {
     height: 5.5rem;
-    @include mq('small') {}
+    @include mq('small') {
+    display: block;
+    }
     @include mq('from-medium') {
         min-height: 4.5rem;
         max-width: 1280px;
         padding: 0.5rem 1rem;
-    }
-    @include display(flex);
+            @include display(flex);
     @include align-items(center);
+    }
 }
 
 //stopka
@@ -168,8 +170,13 @@
 }
 
 .entry-content__icon {
+    line-height: 2.5rem;
+    display: block;
+    float: left;
+    @include mq('from-medium'){
     position: absolute;
     left: -2.5rem;
+    }
     min-height: 2.5rem;
 }
 
@@ -177,6 +184,12 @@
     margin-bottom: 1rem;
 }
 .entry-content__section-title {
+    @include mq('small'){
+        height: 2.5rem;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.75rem;
+        margin: 1.75rem 0 1.25rem;
+    }
     position: relative;
 }
 
@@ -188,6 +201,11 @@
     .post-meta-wrapper {
         padding: 1.5rem;
     }
+}
+
+.blog-post-excerpt {
+    padding-bottom: 1rem;
+    margin: 2rem 0;
 }
 
 @import 'widgets';

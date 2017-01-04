@@ -31,18 +31,17 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post(); ?>
 
-				<section class="post-excerpt">
+				<section class="blog-post-excerpt">
                     <?php
-                        the_title( '<h1 class="entry-title">', '</h1>' );
+                        the_date('', '<h2 class="post-date">', '</h2>');
+                        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
                         the_post_thumbnail( 'full' ); ?>
                     <div class="post-meta-wrapper">
                     <?php
-                        echo the_sjkp_meta('wyjazdy');
                         the_excerpt(); 
-                            ?>
+                    ?>
                         <a href="<?php echo get_permalink(); ?>"> więcej</a>
                     </div>
-                    <div></div>
                 </section>
 
 			<?php endwhile;

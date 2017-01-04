@@ -264,6 +264,11 @@ h6 {
   border-bottom: 1px solid #f2f2f2;
   background-color: #fff;
   line-height: 2.5rem; }
+  @media (min-width: 1px) and (max-width: 764px) {
+    .entry-content .section__title {
+      display: inline;
+      border: none;
+      margin-bottom: 1.25rem; } }
 
 .entry-header {
   border-bottom: 1px solid lightgray;
@@ -315,6 +320,20 @@ h6 {
   width: 100%;
   font-weight: 600;
   border-bottom: 1px solid lightgray; }
+
+.blog-post-excerpt .entry-title {
+  font-size: 2rem;
+  text-align: left;
+  border-bottom: 1px solid royalblue;
+  margin-top: 0.5rem;
+  display: block;
+  padding: 0; }
+
+.post-date {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: .5rem; }
 
 .home .entry-title {
   font-weight: bold;
@@ -485,7 +504,8 @@ table {
   margin: 1em 0 1.5em 0;
   border-collapse: collapse;
   font-size: 0.9em !important;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  table-layout: fixed !important; }
   table th {
     text-align: center;
     padding: 1em;
@@ -504,6 +524,7 @@ table {
 /*		SU Table overwrites
 ---------------------------------------------------------------*/
 .site-main .entry-content .su-table table {
+  table-layout: fixed !important;
   width: 100%;
   margin: 1em 0 1.5em 0 !important;
   border-collapse: collapse;
@@ -657,9 +678,14 @@ a {
 
 @media (min-width: 1px) and (max-width: 764px) {
   .site-logo {
-    margin-left: 2rem; } }
+    height: 4.5rem; } }
 .site-logo img {
-  max-height: 3.7rem; }
+  max-height: 3.7rem;
+  margin: auto 0 auto 2rem; }
+  @media (min-width: 1px) and (max-width: 764px) {
+    .site-logo img {
+      position: absolute;
+      top: 1.20rem; } }
 
 .site-header {
   position: relative;
@@ -896,7 +922,7 @@ ________________________________________________________________________________
   background-color: #303035;
   position: absolute;
   width: 100%;
-  top: 4rem;
+  top: 4.5rem;
   z-index: 99999; }
   .mobile-navigation ul {
     list-style: none;
@@ -934,6 +960,7 @@ ________________________________________________________________________________
   cursor: pointer;
   background: none;
   position: absolute;
+  top: 2rem;
   right: 2rem; }
   .menu-toggle-button:focus {
     outline: none; }
@@ -968,7 +995,7 @@ ________________________________________________________________________________
 
 .mobile-subnav {
   background-color: #23282d;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem;
   color: white; }
   .mobile-subnav h3 {
     font-size: 1rem;
@@ -981,12 +1008,16 @@ ________________________________________________________________________________
     display: inline-block;
     float: left;
     padding: 0.45rem 0.65rem 0.45rem 0.65rem;
-    border-radius: 0.25rem 0.25rem 0 0;
+    border-radius: 0.25rem;
     border-bottom: none;
     background-color: #aaa;
-    margin: 0.45rem 0.45rem 0 0.45rem; }
+    margin: 0.25rem; }
     .mobile-subnav li.current_page_item {
       background-color: white; }
+      .mobile-subnav li.current_page_item a {
+        color: #777; }
+    .mobile-subnav li a {
+      color: aliceblue; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1271,28 +1302,31 @@ object {
     padding: 3rem 1rem 5rem 1rem; } }
 
 .main-nav-wrapper {
-  height: 5.5rem;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center; }
+  height: 5.5rem; }
+  @media (min-width: 1px) and (max-width: 764px) {
+    .main-nav-wrapper {
+      display: block; } }
   @media (min-width: 765px) {
     .main-nav-wrapper {
       min-height: 4.5rem;
       max-width: 1280px;
-      padding: 0.5rem 1rem; } }
+      padding: 0.5rem 1rem;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center; } }
 
 .site-info {
   margin-top: 2rem;
@@ -1325,15 +1359,26 @@ object {
       color: #fafafa; }
 
 .entry-content__icon {
-  position: absolute;
-  left: -2.5rem;
+  line-height: 2.5rem;
+  display: block;
+  float: left;
   min-height: 2.5rem; }
+  @media (min-width: 765px) {
+    .entry-content__icon {
+      position: absolute;
+      left: -2.5rem; } }
 
 .entry-content__section {
   margin-bottom: 1rem; }
 
 .entry-content__section-title {
   position: relative; }
+  @media (min-width: 1px) and (max-width: 764px) {
+    .entry-content__section-title {
+      height: 2.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.75rem;
+      margin: 1.75rem 0 1.25rem; } }
 
 .post-excerpt {
   margin: 1rem 0;
@@ -1341,6 +1386,10 @@ object {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25); }
   .post-excerpt .post-meta-wrapper {
     padding: 1.5rem; }
+
+.blog-post-excerpt {
+  padding-bottom: 1rem;
+  margin: 2rem 0; }
 
 .site-content .widget-area, .site-info .widget-area {
   float: left;
@@ -1374,6 +1423,9 @@ object {
       color: royalblue; }
       .widget-area .menu li a:hover, .widget-area .menu li a:visited {
         color: royalblue; }
+
+.widget_recent_entries li {
+  margin: 1rem 0; }
 
 .page-id-86 .widget-area .menu a {
   color: #747dc4; }

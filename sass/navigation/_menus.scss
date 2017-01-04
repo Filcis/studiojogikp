@@ -1,9 +1,14 @@
 .site-logo {
     @include mq('small') {
-        margin-left: 2rem;
+    height: 4.5rem;
     }
     img {
         max-height: 3.7rem;
+        margin: auto 0 auto 2rem;
+        @include mq('small') {
+        position: absolute ;
+        top: 1.20rem;
+        }
     }
 }
 
@@ -248,7 +253,7 @@ ________________________________________________________________________________
     background-color: $color__background-mobilemenu;
     position: absolute;
     width: 100%;
-    top: 4rem;
+    top: 4.5rem;
     z-index: 99999;
     ul {
         list-style: none;
@@ -295,6 +300,7 @@ ________________________________________________________________________________
         outline: none;
     }
     position: absolute;
+    top: 2rem;
     right: 2rem;
     @include mq('from-medium') {
         display: none;
@@ -332,7 +338,7 @@ ________________________________________________________________________________
 
 .mobile-subnav {
     background-color: $color__background-mobilesubmenu;
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    padding: 0.5rem;
     color: white;
     h3 {
         font-size: 1rem;
@@ -346,12 +352,18 @@ ________________________________________________________________________________
         display: inline-block;
         float: left;
         padding: 0.45rem 0.65rem 0.45rem 0.65rem;
-        border-radius: 0.25rem 0.25rem 0 0;
+        border-radius: 0.25rem;
         border-bottom: none;
         background-color: #aaa;
-        margin: 0.45rem 0.45rem 0 0.45rem;
+        margin: 0.25rem;
         &.current_page_item {
             background-color: white;
+            a {
+            color: #777;
+        }
+        }
+        a {
+            color: aliceblue;
         }
     }
 }

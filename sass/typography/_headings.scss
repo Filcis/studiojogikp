@@ -19,6 +19,11 @@ h6 {
     }
     
 .section__title {
+    @include mq('small'){
+        display: inline;
+        border: none;
+        margin-bottom: 1.25rem;
+    }
         border-bottom: 1px solid #f2f2f2;
         background-color: #fff;
         line-height: 2.5rem; //dla wyrównania z ikonką
@@ -56,6 +61,22 @@ h6 {
     width: 100%;
     font-weight: 600;
     border-bottom: 1px solid lightgray;
+}
+
+.blog-post-excerpt .entry-title {
+    font-size: 2rem;
+    text-align: left;
+    border-bottom: 1px solid $color__link;
+    margin-top: 0.5rem;
+    display: block;
+    padding: 0;
+}
+
+.post-date {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: .5rem;
 }
 
 .home {

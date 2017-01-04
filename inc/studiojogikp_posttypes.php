@@ -64,3 +64,36 @@ function studiojogikp_cpts_szkolenia() {
 
 // End
 }
+
+//FILTRY dla recent post widget
+
+function sjkp_widget_posts_args($args) {
+	if ( is_page_template('page-templates/page_szkolenia.php') || 'sjkp_szkolenia' == get_post_type() ) {
+		return array(
+			'posts_per_page' => 5,
+			'no_found_rows' => true, 
+			'post_status' => 'publish', 
+			'ignore_sticky_posts' => true,
+            'post_type' => 'sjkp_szkolenia',
+			 );
+	} elseif ( is_page_template('page-templates/page_wyjazdy.php') || 'sjkp_wyjazdy' == get_post_type() ) {
+		return array(
+			'posts_per_page' => 5,
+			'no_found_rows' => true, 
+			'post_status' => 'publish', 
+			'ignore_sticky_posts' => true,
+            'post_type' => 'sjkp_wyjazdy',
+			 );
+	}
+	else {//keeps the normal behaviour if we are not in category context
+		return $args;
+	}
+}
+
+add_filter( 'widget_posts_args', 'sjkp_widget_posts_args');
+
+function sjkp_widget_posts_title($args) {
+    
+}
+    
+add_filter( 'widget_posts_args', 'sjkp_widget_posts_args');

@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Szkolenia/treningi dla nauczycieli
- *
+ * Template Post Type: Szkolenia
  *
  * @package studiojogikp
  *
