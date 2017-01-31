@@ -30,6 +30,10 @@ h6 {
     }
 }
 
+.entry-meta {
+    font-size: 0.8em;
+    display: inline;
+}
 
 .entry-header {
     @include mq('from-medium') {

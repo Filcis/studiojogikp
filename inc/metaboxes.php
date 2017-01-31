@@ -187,6 +187,9 @@ function sjkp_subpage_icon_html( $post) {
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_7" value="7" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '7' ); ?>>
                     <label for="sjkp_subpage_icon_ikona_7">harmonogram</label>
+                    <br>
+                    <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_8" value="8" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '8' ); ?>>
+                    <label for="sjkp_subpage_icon_ikona_8">terapia</label>
                     <br> </p>
                 <?php
 }
@@ -228,6 +231,9 @@ function the_sjkp_subpage_icon (){
     case '7':
         $output.= 'icon_harmonogram';
     break;
+    case '8':
+        $output.= 'icon_terapia';
+    break;        
     }
                 $output.= '.svg">';
     }

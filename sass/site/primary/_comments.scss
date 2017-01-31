@@ -4,3 +4,11 @@
 .bypostauthor {
 	display: block;
 }
+
+.comment-list li {
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding-bottom: 0.75em;
+    padding-top: 0.75em;
+}

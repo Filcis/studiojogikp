@@ -6,7 +6,7 @@ html {
 }
 
 p {
-	margin: 0 0 1rem;;
+	margin: 0 0 1rem;
 }
 
 dfn, cite, em, i {
@@ -14,11 +14,16 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0.5em 1.5em;
     padding: 1rem;
     font-size: 1.2rem;
     background-color: #fafafc;
     font-style: italic;
+    p {
+        padding: 0;
+        margin: 0;
+        
+    }
 }
 
 address {

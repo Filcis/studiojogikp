@@ -71,6 +71,16 @@
     }
 }
 
+.blog .site-main,
+.single .site-main {
+    @include mq('from-medium') {
+        padding: 3.5rem 4.2rem;
+    }
+    @include mq('large') {
+        padding: 3.5rem 9rem;
+    }
+}
+
 .fullwidth-nav-wrapper {
     background-color: #f3f3f3;
     @include mq('from-medium') {

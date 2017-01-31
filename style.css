@@ -270,6 +270,10 @@ h6 {
       border: none;
       margin-bottom: 1.25rem; } }
 
+.entry-meta {
+  font-size: 0.8em;
+  display: inline; }
+
 .entry-header {
   border-bottom: 1px solid lightgray;
   margin-bottom: 2rem; }
@@ -324,7 +328,7 @@ h6 {
 .blog-post-excerpt .entry-title {
   font-size: 2rem;
   text-align: left;
-  border-bottom: 1px solid royalblue;
+  border-bottom: 1px solid #999;
   margin-top: 0.5rem;
   display: block;
   padding: 0; }
@@ -392,11 +396,14 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5em;
+  margin: 0.5em 1.5em;
   padding: 1rem;
   font-size: 1.2rem;
   background-color: #fafafc;
   font-style: italic; }
+  blockquote p {
+    padding: 0;
+    margin: 0; }
 
 address {
   margin: 0 0 1.5em; }
@@ -503,28 +510,30 @@ table {
   width: 100%;
   margin: 1em 0 1.5em 0;
   border-collapse: collapse;
-  font-size: 0.9em !important;
+  font-size: 0.8em !important;
   border: 1px solid #ccc;
-  table-layout: fixed !important; }
+  table-layout: fixed;
+  width: 100%;
+  overflow: scroll; }
   table th {
     text-align: center;
     padding: 1em;
-    font-size: 1em;
-    font-weight: normal;
+    font-weight: bold;
     color: #333;
     border: 1px solid #ccc;
-    background: #f0f0f0; }
+    background: #f0f0f0;
+    word-wrap: break-word; }
   table td {
     padding: 0.5em 1em;
     border: 1px solid #ccc;
-    background: #fff; }
+    background: #fff;
+    word-wrap: break-word; }
   table tr:nth-child(even) td {
     background: #eeeef5 !important; }
 
 /*		SU Table overwrites
 ---------------------------------------------------------------*/
 .site-main .entry-content .su-table table {
-  table-layout: fixed !important;
   width: 100%;
   margin: 1em 0 1.5em 0 !important;
   border-collapse: collapse;
@@ -656,12 +665,12 @@ input[type="submit"] {
 # Navigation
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #999;
   text-decoration: none; }
   a:visited {
-    color: royalblue; }
+    color: #999; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #666; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -674,7 +683,59 @@ a {
     .breadcrumbs {
       display: none; } }
   .breadcrumbs a {
-    color: royalblue; }
+    color: #999; }
+
+.parent-pageid-9 .site-content a, .parent-pageid-9 .site-info a,
+.parent-pageid-9 .site-content .widget-area .menu li a,
+.parent-pageid-9 .site-info .widget-area .menu li a {
+  color: #0047AB; }
+  .parent-pageid-9 .site-content a:visited, .parent-pageid-9 .site-info a:visited,
+  .parent-pageid-9 .site-content .widget-area .menu li a:visited,
+  .parent-pageid-9 .site-info .widget-area .menu li a:visited {
+    color: #0047AB; }
+
+.parent-pageid-13 .site-content a, .parent-pageid-13 .site-info a,
+.parent-pageid-13 .site-content .widget-area .menu li a,
+.parent-pageid-13 .site-info .widget-area .menu li a {
+  color: #00abd1; }
+  .parent-pageid-13 .site-content a:visited, .parent-pageid-13 .site-info a:visited,
+  .parent-pageid-13 .site-content .widget-area .menu li a:visited,
+  .parent-pageid-13 .site-info .widget-area .menu li a:visited {
+    color: #00abd1; }
+
+.page-id-19 .site-content a, .page-id-19 .site-info a,
+.single-sjkp_wyjazdy .site-content a,
+.single-sjkp_wyjazdy .site-info a,
+.single-sjkp_wyjazdy .site-content .widget-area .menu li a,
+.single-sjkp_wyjazdy .site-info .widget-area .menu li a,
+.page-id-19 .site-content .widget-area .menu li a,
+.page-id-19 .site-info .widget-area .menu li a {
+  color: #5348d4; }
+  .page-id-19 .site-content a:visited, .page-id-19 .site-info a:visited,
+  .single-sjkp_wyjazdy .site-content a:visited,
+  .single-sjkp_wyjazdy .site-info a:visited,
+  .single-sjkp_wyjazdy .site-content .widget-area .menu li a:visited,
+  .single-sjkp_wyjazdy .site-info .widget-area .menu li a:visited,
+  .page-id-19 .site-content .widget-area .menu li a:visited,
+  .page-id-19 .site-info .widget-area .menu li a:visited {
+    color: #5348d4; }
+
+.page-id-15 .site-content a, .page-id-15 .site-info a,
+.single-sjkp_szkolenia .site-content a,
+.single-sjkp_szkolenia .site-info a,
+.single-sjkp_szkolenia .site-content .widget-area .menu li a,
+.single-sjkp_szkolenia .site-info .widget-area .menu li a,
+.page-id-15 .site-content .widget-area .menu li a,
+.page-id-15 .site-info .widget-area .menu li a {
+  color: #4400cf; }
+  .page-id-15 .site-content a:visited, .page-id-15 .site-info a:visited,
+  .single-sjkp_szkolenia .site-content a:visited,
+  .single-sjkp_szkolenia .site-info a:visited,
+  .single-sjkp_szkolenia .site-content .widget-area .menu li a:visited,
+  .single-sjkp_szkolenia .site-info .widget-area .menu li a:visited,
+  .page-id-15 .site-content .widget-area .menu li a:visited,
+  .page-id-15 .site-info .widget-area .menu li a:visited {
+    color: #4400cf; }
 
 @media (min-width: 1px) and (max-width: 764px) {
   .site-logo {
@@ -881,13 +942,13 @@ ________________________________________________________________________________
   z-index: 999; }
 
 .wyjazdy .sjkp_page_icon {
-  background-image: url("assets/icon_main-01.svg"); }
+  background-image: url("assets/icon_main-03.svg"); }
 
 .terapia .sjkp_page_icon {
   background-image: url("assets/icon_main-02.svg"); }
 
 .szkola .sjkp_page_icon {
-  background-image: url("assets/icon_main-03.svg"); }
+  background-image: url("assets/icon_main-01.svg"); }
 
 .szkolenia .sjkp_page_icon {
   background-image: url("assets/icon_main-04.svg"); }
@@ -1149,6 +1210,13 @@ ________________________________________________________________________________
 .bypostauthor {
   display: block; }
 
+.comment-list li {
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding-bottom: 0.75em;
+  padding-top: 0.75em; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1284,6 +1352,15 @@ object {
     .site-main {
       padding: 3.5rem 7rem; } }
 
+@media (min-width: 765px) {
+  .blog .site-main,
+  .single .site-main {
+    padding: 3.5rem 4.2rem; } }
+@media (min-width: 1101px) {
+  .blog .site-main,
+  .single .site-main {
+    padding: 3.5rem 9rem; } }
+
 .fullwidth-nav-wrapper {
   background-color: #f3f3f3; }
   @media (min-width: 765px) {
@@ -1410,7 +1487,7 @@ object {
     list-style: none;
     margin: 0 0 1.5em 0;
     padding-left: 1rem;
-    border-left: 1px solid royalblue; }
+    border-left: 1px solid #999; }
   .widget-area .menu .current-menu-item a:before {
     content: '\2014';
     position: absolute;
@@ -1420,14 +1497,30 @@ object {
     .widget-area .menu li a {
       display: block;
       padding: 0.3rem 0;
-      color: royalblue; }
+      color: #999; }
       .widget-area .menu li a:hover, .widget-area .menu li a:visited {
-        color: royalblue; }
+        color: #999; }
+
+.parent-pageid-13 .site-content .widget-area ul, .parent-pageid-13 .site-info .widget-area ul {
+  border-left: 1px solid #00abd1; }
+
+.parent-pageid-9 .site-content .widget-area ul, .parent-pageid-9 .site-info .widget-area ul {
+  border-left: 1px solid #0047AB; }
+
+.single-sjkp_wyjazdy .site-content .widget-area ul, .single-sjkp_wyjazdy .site-info .widget-area ul,
+.page-id-19 .site-content .widget-area ul,
+.page-id-19 .site-info .widget-area ul {
+  border-left: 1px solid #5348d4; }
+
+.single-sjkp_szkolenia .site-content .widget-area ul, .single-sjkp_szkolenia .site-info .widget-area ul,
+.page-id-15 .site-content .widget-area ul,
+.page-id-15 .site-info .widget-area ul {
+  border-left: 1px solid #4400cf; }
 
 .widget_recent_entries li {
   margin: 1rem 0; }
 
 .page-id-86 .widget-area .menu a {
-  color: #747dc4; }
+  color: #4b15ba; }
 
 /*# sourceMappingURL=style.css.map */

@@ -28,3 +28,39 @@ a {
         color: $color__link;
     }
 }
+
+.parent-pageid-9 .site-content a,
+.parent-pageid-9 .site-content .widget-area .menu li a{
+    color: $violet;
+           &:visited {
+        color: $violet;
+    }
+}
+.parent-pageid-13 .site-content a,
+.parent-pageid-13 .site-content .widget-area .menu li a {
+    color: $turquoise;
+       &:visited {
+        color: $turquoise;
+    }
+}
+
+.page-id-19 .site-content a,
+.single-sjkp_wyjazdy .site-content a, 
+.single-sjkp_wyjazdy .site-content .widget-area .menu li a, 
+.page-id-19 .site-content .widget-area .menu li a {
+    color: $cobalt;
+       &:visited {
+        color: $cobalt;
+    }
+}
+
+.page-id-15 .site-content a,
+.single-sjkp_szkolenia .site-content a, 
+.single-sjkp_szkolenia .site-content .widget-area .menu li a, 
+.page-id-15 .site-content .widget-area .menu li a {
+    color: $indigo;
+       &:visited {
+        color: $indigo;
+    }
+}
+
