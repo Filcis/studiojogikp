@@ -16,7 +16,7 @@ input[type="color"],
 textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-	border-radius: 3px;
+	border-radius: 4px;
 	padding: 3px;
     width: 100%;
     margin-bottom: 1rem;
@@ -28,11 +28,13 @@ textarea {
 
 select {
 	border: 1px solid $color__border-input;
+    width: 100%;
 }
 
 textarea {
 	max-width: 100%;
     resize: vertical;
+    height: 150px;
 }
 
 input[type="submit"] {
@@ -53,12 +55,21 @@ input[type="submit"] {
 
 .entry-content {
     form {
-        padding: 2.5rem 3rem 1.75rem;
+        padding: 2.5rem 5rem 1.75rem;
+        max-width: 700px;
         background-color: $color__background-form;
         border-radius: 1rem;
+        border: 1px solid #ccc;
         -webkit-box-shadow: 5px 5px 9px 0px rgba(185,188,199,1);
         -moz-box-shadow: 5px 5px 9px 0px rgba(185,188,199,1);
         box-shadow: 5px 5px 9px 0px rgba(185,188,199,1);
-        margin: 1.5rem 0;
+        margin: 1.9rem auto;
+        h1,h2,h3,h4,h5,h6 {
+            margin-top: 0;
+            text-align: center;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+            border-bottom: 1px solid #777;
+        }
     }
 }
