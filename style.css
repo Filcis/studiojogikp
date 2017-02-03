@@ -1263,6 +1263,22 @@ object {
 .wp-caption-text {
   text-align: center; }
 
+.post-excerpt img,
+.article img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out; }
+
+.post-excerpt:hover img {
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%); }
+
+.article img:hover {
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%); }
+
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
