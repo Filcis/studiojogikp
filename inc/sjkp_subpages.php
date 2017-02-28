@@ -8,17 +8,7 @@ if ( $post->post_parent ) {
         'echo'     => 0,
         'post_status'  => 'publish', 
         'sort_coumn' => 'menu_order'
-    ) );
-} 
-//    else {
-//    $children = wp_list_pages( array(
-//        'title_li' => '',
-//        'child_of' => $post->ID,
-//        'echo'     => 0,
-//        'post_status'  => 'publish' 
-//    ) );
-//}
- 
+    ) );    
 if ( $children ) : ?>
     <nav id="mobile-subnav" class="mobile-subnav clear">
 <h3><?php echo get_the_title($post->post_parent)  ?></h3>
@@ -28,4 +18,6 @@ if ( $children ) : ?>
 </nav>
     <?php endif;
 }
+} 
+
 add_action('studiojogikp_subpages-list','studiojogikp_subpages');

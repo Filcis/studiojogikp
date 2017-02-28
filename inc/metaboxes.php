@@ -207,8 +207,9 @@ add_action( 'save_post', 'sjkp_subpage_icon_save' );
 
 function the_sjkp_subpage_icon (){
     $icon_value = sjkp_get_meta( 'sjkp_subpage_icon_ikona' );
+    $output = '';
     if ($icon_value && sjkp_get_meta( 'sjkp_subpage_icon_ikona' )!== '0') {
-    $output= '<img class="entry-title-icon" src="'. get_stylesheet_directory_uri() .'/assets/';    
+    $output = '<img class="entry-title-icon" src="'. get_stylesheet_directory_uri() .'/assets/';    
     switch ($icon_value) {
     case '1':
         $output.= 'icon_poczatkujacy';
@@ -235,7 +236,7 @@ function the_sjkp_subpage_icon (){
         $output.= 'icon_terapia';
     break;        
     }
-                $output.= '.svg">';
+        $output.= '.svg">';
     }
 
     return $output;

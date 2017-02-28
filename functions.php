@@ -197,5 +197,3 @@ require get_template_directory() . '/inc/sjkp_tiled_menu.php';
 require get_template_directory() . '/inc/metaboxes.php';
 
 require get_template_directory() . '/inc/sjkp_shortcodes.php';
-
-require get_template_directory() . '/inc/sjkp_subpages.php';
