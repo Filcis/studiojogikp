@@ -16,7 +16,7 @@ add_shortcode( 'sjkp_uwaga', 'sjkp_warning_shortcode' );
 
 //sekcje z ikonami
 function sjkp_section_shortcode( $atts = [], $content = null ) {
-    
+
     $url = Get_template_directory_uri();
     // nazwy attr zamienione na lowercase
     $atts = array_change_key_case((array)$atts, CASE_LOWER);
@@ -57,8 +57,8 @@ function sjkp_section_shortcode( $atts = [], $content = null ) {
     }
     //końcowy html
     $output ='<div class="entry-content__section-title">'. $ikona . $title . '</div
-        <section class="entry-content__section '. $a['typ'] .'">' 
-            . do_shortcode($content) . 
+        <section class="entry-content__section">' 
+            . do_shortcode($content) .
         '</section>';
     return $output;
 }
