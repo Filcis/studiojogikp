@@ -1,9 +1,0 @@
-(function ($) {
-    var hover_menu = $('.menu-toggle-button');
-    toggleButton.click(function (e) {
-        $(this).toggleClass('toggled');     //zbędne?
-		$('#site-navigation-mobile').toggleClass('open');
-        e.preventDefault();
-
-    });
-})(jQuery);

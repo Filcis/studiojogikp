@@ -1,0 +1,200 @@
+# Copyright (C) 2018 Studio Jogi Katarzyny Pilorz 1.0.0
+# This file is distributed under the same license as the Studio Jogi Katarzyny Pilorz 1.0.0 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Studio Jogi Katarzyny Pilorz 1.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: 404.php:33
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:51
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: comments.php:31
+msgctxt "comments title"
+msgid "Jeden komentarz &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s komentarzy &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40, comments.php:61
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:43
+msgid "Starsze"
+msgstr ""
+
+#: comments.php:44
+msgid "Nowsze"
+msgstr ""
+
+#: comments.php:64
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:65
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:46
+msgid "Primary"
+msgstr ""
+
+#: functions.php:47
+msgid "Kafelki"
+msgstr ""
+
+#: functions.php:48
+msgid "Menu mobilne"
+msgstr ""
+
+#: functions.php:91
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:93, functions.php:103, functions.php:113, functions.php:123, functions.php:132
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:101
+msgid "Footer kolumna 1"
+msgstr ""
+
+#: functions.php:111
+msgid "Footer kolumna 2"
+msgstr ""
+
+#: functions.php:121
+msgid "Footer kolumna 3"
+msgstr ""
+
+#: functions.php:130
+msgid "Footer kolumna 4"
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: home.php:3, page-templates/page_wyjazdy.php:3
+msgid "Joga w pięknych miejscach"
+msgstr ""
+
+#: inc/studiojogikp_posttypes.php:5
+msgid "Wyjazdy"
+msgstr ""
+
+#: inc/studiojogikp_posttypes.php:6
+msgid "Wyjazd"
+msgstr ""
+
+#: inc/studiojogikp_posttypes.php:10
+msgid "wyjazdy"
+msgstr ""
+
+#: inc/studiojogikp_posttypes.php:38, inc/studiojogikp_posttypes.php:43
+msgid "Szkolenia"
+msgstr ""
+
+#: inc/studiojogikp_posttypes.php:39
+msgid "Szkolenie"
+msgstr ""
+
+#: inc/template-tags.php:28
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:33
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:50, inc/template-tags.php:56
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:52
+msgid "Zamieszczone w %1$s"
+msgstr ""
+
+#: inc/template-tags.php:58
+msgid "Tag %1$s"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:65
+msgid "Napisz komentarz<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#: inc/template-tags.php:72, template-parts/content-home.php:39, template-parts/content-page.php:45, template-parts/content-subpage.php:46
+msgid "Edit %s"
+msgstr ""
+
+#: page-templates/page_full-width.php:3
+msgid "Full Width Page"
+msgstr ""
+
+#: page-templates/page_szkolenia.php:3
+msgid "Szkolenia/treningi dla nauczycieli"
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-home.php:28, template-parts/content-page.php:34, template-parts/content-subpage.php:35, template-parts/content.php:44
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: template-parts/content.php:39
+msgid "Czytaj dalej %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""

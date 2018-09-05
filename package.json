@@ -1,0 +1,43 @@
+{
+  "name": "studiojogikp",
+  "version": "1.0.0",
+  "description": "WordPress theme for yoga studio",
+  "author": "Filip Cislak",
+  "homepage": "https://cislakfilip.pl",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-wp-toolkit": "^2.3.2",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "npm": "^6.4.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Filcis/studiojogikp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Filcis/studiojogikp/issues"
+  },
+  "homepage": "https://github.com/Filcis/studiojogikp#readme"
+}

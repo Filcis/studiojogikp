@@ -96,7 +96,7 @@ function studiojogikp_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-    
+
     register_sidebar( array(
         'name'          => esc_html__( 'Footer kolumna 1', 'studiojogikp' ),
         'id'            => 'sjkp-footer-sidebar-1',
@@ -106,7 +106,7 @@ function studiojogikp_widgets_init() {
 		'before_title'  => '<h4 class="footer-title">',
 		'after_title'   => '</h4>',
     ) );
-    
+
     register_sidebar( array(
         'name'          => esc_html__( 'Footer kolumna 2', 'studiojogikp' ),
         'id'            => 'sjkp-footer-sidebar-2',
@@ -116,7 +116,7 @@ function studiojogikp_widgets_init() {
 		'before_title'  => '<h4 class="footer-title">',
 		'after_title'   => '</h4>',
     ) );
-    
+
 register_sidebar( array(
         'name'          => esc_html__( 'Footer kolumna 3', 'studiojogikp' ),
         'id'            => 'sjkp-footer-sidebar-3',
@@ -127,8 +127,8 @@ register_sidebar( array(
 		'after_title'   => '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer kolumna 4', 'studiojogikp' ),
-        'id'            => 'sjkp-footer-sidebar-4',
+    'name'          => esc_html__( 'Footer kolumna 4', 'studiojogikp' ),
+    'id'            => 'sjkp-footer-sidebar-4',
 		'description'   => esc_html__( 'Add widgets here.', 'studiojogikp' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -142,15 +142,11 @@ add_action( 'widgets_init', 'studiojogikp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function studiojogikp_scripts() {
-    wp_enqueue_style('studiojogikp-font','https://fonts.googleapis.com/css?family=Hind&subset=latin,latin-ext') ;
-    
-	wp_enqueue_style( 'studiojogikp-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'studiojogikp-navigation', get_template_directory_uri() . '/js/toggle-menu.js', array(), '1', true );
-    
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), false, false );
-
-	wp_enqueue_script( 'studiojogikp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+  wp_enqueue_style('studiojogikp-font','https://fonts.googleapis.com/css?family=Hind&subset=latin,latin-ext') ;
+  wp_enqueue_style( 'studiojogikp-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'studiojogikp-handlers', get_template_directory_uri() . '/js/event_handlers.js', array(), '1', true );
+  wp_enqueue_script( 'scritps', get_template_directory_uri() . '/js/theme.js', array(), false, false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
