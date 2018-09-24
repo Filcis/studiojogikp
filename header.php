@@ -21,6 +21,17 @@
     </head>
 
     <body <?php body_class(); ?>>
+      <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125267504-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125267504-1');
+      </script>
+      <!-- Koniec Google Analytics -->
+
         <div id="page" class="site">
             <a class="skip-link screen-reader-text" href="#content">
                 <?php esc_html_e( 'Skip to content', 'studiojogikp' ); ?>

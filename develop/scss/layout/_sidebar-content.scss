@@ -85,30 +85,12 @@
     background-color: #f3f3f3;
     @include mq('from-medium') {
         background-color: $color__nav-wrapper-background;
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        border-bottom: 1px solid lightgray;
     }
 }
-
-//.article-header-strip {
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    right: 0;
-//    height: .30rem;
-//    background-color: #eee; //default color
-//}
-//
-//.parent-pageid-13 .article-header-strip {
-//    background-color: $cobalt;
-//}
-//.parent-pageid-13 .article-header-strip {
-//    background-color: $turquoise;
-//}
-//.parent-pageid-13 .article-header-strip {
-//    background-color: $violet;
-//}
-//.page-template-page_szkolenia .article-header-strip {
-//    background-color: $indigo;
-//}
 
 .main-nav-wrapper,
 .secondary-nav-wrapper {
@@ -120,7 +102,7 @@
 .secondary-nav-wrapper {
     @include mq('from-medium') {
         background-color: $color__sec-nav-wrapper-background;
-        padding: 3rem 1rem 5rem 1rem;
+        padding: 7.5rem 1rem 5rem 1rem;
     }
 }
 
@@ -130,19 +112,19 @@
     display: block;
     }
     @include mq('from-medium') {
-        min-height: 4.5rem;
-        max-width: 1280px;
-        padding: 0.5rem 1rem;
-            @include display(flex);
-    @include align-items(center);
+      min-height: 4.5rem;
+      max-width: 1280px;
+      padding: 0.5rem 1rem;
+      @include display(flex);
+      @include align-items(center);
     }
 }
 
 //stopka
 .site-info {
-    margin-top: 2rem;
-    @extend .site-content;
-    top: 0;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1380px;
     background-color: $color__footer-background;
     color: $color__footer-text;
     box-shadow: none;

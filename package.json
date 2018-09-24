@@ -2,8 +2,8 @@
   "name": "studiojogikp",
   "version": "1.0.0",
   "description": "WordPress theme for yoga studio",
-  "author": "Filip Cislak",
-  "homepage": "https://cislakfilip.pl",
+  "author": "",
+  "homepage": "https://github.com/Filcis/studiojogikp#readme",
   "main": "Gulpfile.js",
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -12,6 +12,7 @@
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
     "gulp": "^3.9.1",
+    "gulp-notify": "^3.2.0",
     "gulp-wp-toolkit": "^2.3.2",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
@@ -34,10 +35,8 @@
     "type": "git",
     "url": "git+https://github.com/Filcis/studiojogikp.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Filcis/studiojogikp/issues"
-  },
-  "homepage": "https://github.com/Filcis/studiojogikp#readme"
+  }
 }

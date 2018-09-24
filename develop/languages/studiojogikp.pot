@@ -97,7 +97,7 @@ msgstr ""
 msgid "Footer kolumna 4"
 msgstr ""
 
-#: header.php:26
+#: header.php:37
 msgid "Skip to content"
 msgstr ""
 
