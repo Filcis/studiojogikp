@@ -27,7 +27,7 @@ get_header(); ?>
             <?php if (is_front_page() && wp_is_mobile()) : ?>
     <div class="secondary-nav-wrapper clear">
         <nav id="secondary-site-navigation" class="tiled-navigation" role="navigation">
-            <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu-tiles', 'walker' => new sjkp_tiled_menu() ) ); ?>
+            <?php do_action('sjkp_header_tiled_menu') ?>
         </nav>
     </div>
     <?php endif; ?>

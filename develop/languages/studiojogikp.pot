@@ -66,34 +66,30 @@ msgid "Primary"
 msgstr ""
 
 #: functions.php:47
-msgid "Kafelki"
-msgstr ""
-
-#: functions.php:48
 msgid "Menu mobilne"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:90
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:93, functions.php:103, functions.php:113, functions.php:123, functions.php:132
+#: functions.php:92, functions.php:102, functions.php:112, functions.php:122, functions.php:131
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:101
+#: functions.php:100
 msgid "Footer kolumna 1"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:110
 msgid "Footer kolumna 2"
 msgstr ""
 
-#: functions.php:121
+#: functions.php:120
 msgid "Footer kolumna 3"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:129
 msgid "Footer kolumna 4"
 msgstr ""
 

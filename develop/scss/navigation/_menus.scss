@@ -1,15 +1,26 @@
 .site-logo {
-    @include mq('small') {
-    height: 4.5rem;
-    }
-    img {
-        max-height: 3.7rem;
-        margin: auto 0 auto 2rem;
-        @include mq('small') {
-        position: absolute ;
-        top: 1.20rem;
-        }
-    }
+  display: block;
+  height: 4rem;
+  @include mq('small') {
+    width: auto;
+  }
+  img {
+      height: 4rem;
+      @include mq('small') {
+      margin: auto 0 auto 2rem;
+      position: absolute ;
+      top: 1.20rem;
+      }
+  }
+}
+
+.main-nav-wrapper {
+  width: 100%;
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
 .site-header {
@@ -26,6 +37,7 @@
     @include mq('small') {
         display: none;
     }
+    max-width: 1380px;
     display: block;
     float: right;
     margin-left: auto;
@@ -75,10 +87,10 @@ ________________________________________________________________________________
     margin: auto;
     ul {
         min-height: 100%;
-        @include mq('from-medium') {
-            @include display(flex);
-            @include justify-content(space-between);
-            @include align-items(stretch);
+          @include mq('from-medium') {
+          @include display(flex);
+          @include justify-content(space-between);
+          @include align-items(stretch);
         }
         list-style: none;
         margin: 0;
@@ -90,7 +102,7 @@ ________________________________________________________________________________
             width: 24%;
             margin-left: 1%;
             text-align: center;
-            transition: all 0.5s ease-in-out;
+            transition: transform 0.2s ease-in-out;
             position: relative;
             &:first-child {
                 margin-left: 0%;
@@ -98,7 +110,6 @@ ________________________________________________________________________________
             &.current-page-ancestor,
             &.current-menu-item,
             &:hover {
-                //                opacity: 1;
                 @include transform(scale(1.05));
                 z-index: 999;
             }
@@ -177,7 +188,7 @@ ________________________________________________________________________________
         @include mq('from-medium') {
             height: 18rem;
         }
-        @include mqh() {
+        @include mq('large') {
             height: 25rem;
         }
     }
@@ -201,22 +212,6 @@ ________________________________________________________________________________
     position: relative;
     margin: -1.5rem auto 0.5rem auto;
     z-index: 999;
-}
-
-.wyjazdy .sjkp_page_icon {
-    background-image: url('assets/icon_main-03.svg');
-}
-
-.terapia .sjkp_page_icon {
-    background-image: url('assets/icon_main-02.svg');
-}
-
-.szkola .sjkp_page_icon {
-    background-image: url('assets/icon_main-01.svg');
-}
-
-.szkolenia .sjkp_page_icon {
-    background-image: url('assets/icon_main-04.svg');
 }
 
 .sticky .menu-tiles {

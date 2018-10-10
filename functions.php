@@ -44,8 +44,7 @@ function studiojogikp_setup() {
 
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'studiojogikp' ),
-        'secondary' => esc_html__( 'Kafelki', 'studiojogikp' ),
-        'mobile' => esc_html__( 'Menu mobilne', 'studiojogikp'),
+    'mobile' => esc_html__( 'Menu mobilne', 'studiojogikp')
 	) );
 
 	/*
@@ -187,8 +186,6 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * SJKP specific
  */
-
-require get_template_directory() . '/inc/sjkp_tiled_menu.php';
 
 require get_template_directory() . '/inc/metaboxes.php';
 

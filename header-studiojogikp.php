@@ -2,7 +2,7 @@
     <div class="fullwidth-nav-wrapper">
         <div class="main-nav-wrapper clear">
             <div class="site-branding"> <a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                <img alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_template_directory_uri() . '/assets/logo poziom.png' ?>"></a> </div>
+                                <img alt="<?php bloginfo( 'name' ); ?>" src="<?php echo get_template_directory_uri() . '/assets/sjkp-logo.svg' ?>"></a> </div>
             <button class="menu-toggle-button"><span>menu</span></button>
             <!-- .site-branding -->
             <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -22,7 +22,8 @@
     <?php if (!is_front_page() || !wp_is_mobile()) : ?>
     <div class="secondary-nav-wrapper clear">
         <nav id="secondary-site-navigation" class="tiled-navigation" role="navigation">
-            <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu-tiles', 'walker' => new sjkp_tiled_menu() ) ); ?>
+            <!-- add menu plugin -->
+            <?php do_action('sjkp_header_tiled_menu') ?>
         </nav>
     </div>
     <?php endif; ?>
