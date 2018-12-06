@@ -5,9 +5,7 @@
  *
  * @package studiojogikp
  *
-
-/*
-Go to first child if any
+* Go to first child if any
 */
 
 $childpages = get_pages("child_of=".$post->ID."&sort_column=menu_order");

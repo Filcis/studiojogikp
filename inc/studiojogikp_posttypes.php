@@ -26,6 +26,7 @@ function studiojogikp_cpts_wyjazdy() {
 		"query_var" => true,
 
 		"supports" => array( "title", "editor", "thumbnail", "excerpt" ),
+		"show_in_rest" => true,
 			);
 	register_post_type( "sjkp_wyjazdy", $args );
 
@@ -59,6 +60,7 @@ function studiojogikp_cpts_szkolenia() {
 		"query_var" => true,
 
 		"supports" => array( "title", "editor", "thumbnail", "excerpt" ),
+		"show_in_rest" => true,
 			);
 	register_post_type( "sjkp_szkolenia", $args );
 
