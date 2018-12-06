@@ -13,22 +13,6 @@ function sjkp_get_meta( $value ) {
 
 
 function sjkp_add_meta_boxes() {
-	add_meta_box(
-		'informacje_o_wyjedzie-informacje-o-wyjedzie',
-		__( 'informacje o wyjeździe', 'informacje_o_wyjedzie' ),
-		'informacje_o_wyjedzie_html',
-		'sjkp_wyjazdy',
-		'normal',
-		'default'
-	);
-    	add_meta_box(
-		'informacje_o_szkoleniu-informacje-o-szkoleniu',
-		__( 'informacje o szkoleniu', 'informacje_o_szkoleniu' ),
-		'informacje_o_szkoleniu_html',
-		'sjkp_szkolenia',
-		'normal',
-		'default'
-	);
     	add_meta_box(
 		'prowadzcy-prowadzcy',
 		__( 'prowadzący', 'prowadzcy' ),
@@ -47,82 +31,6 @@ function sjkp_add_meta_boxes() {
 	);
 }
 add_action( 'add_meta_boxes', 'sjkp_add_meta_boxes' );
-
-function informacje_o_wyjedzie_html( $post) {
-	wp_nonce_field( '_informacje_o_wyjedzie_nonce', 'informacje_o_wyjedzie_nonce' ); ?>
-    <p>
-        <label for="informacje_o_wyjedzie_termin_wyjazdu">
-            <?php _e( 'termin wyjazdu', 'informacje_o_wyjedzie' ); ?>
-        </label>
-        <br>
-        <input type="text" name="informacje_o_wyjedzie_termin_wyjazdu" id="informacje_o_wyjedzie_termin_wyjazdu" value="<?php echo sjkp_get_meta( 'informacje_o_wyjedzie_termin_wyjazdu' ); ?>"> </p>
-    <p>
-        <label for="informacje_o_wyjedzie_miejsce">
-            <?php _e( 'miejsce', 'informacje_o_wyjedzie' ); ?>
-        </label>
-        <br>
-        <input type="text" name="informacje_o_wyjedzie_miejsce" id="informacje_o_wyjedzie_miejsce" value="<?php echo sjkp_get_meta( 'informacje_o_wyjedzie_miejsce' ); ?>"> </p>
-    <p>
-        <label for="informacje_o_wyjedzie_koszt">
-            <?php _e( 'koszt', 'informacje_o_wyjedzie' ); ?>
-        </label>
-        <br>
-        <input type="text" name="informacje_o_wyjedzie_koszt" id="informacje_o_wyjedzie_koszt" value="<?php echo sjkp_get_meta( 'informacje_o_wyjedzie_koszt' ); ?>"> </p>
-    <?php
-}
-
-function informacje_o_wyjedzie_save( $post_id ) {
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
-	if ( ! isset( $_POST['informacje_o_wyjedzie_nonce'] ) || ! wp_verify_nonce( $_POST['informacje_o_wyjedzie_nonce'], '_informacje_o_wyjedzie_nonce' ) ) return;
-	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
-
-	if ( isset( $_POST['informacje_o_wyjedzie_termin_wyjazdu'] ) )
-		update_post_meta( $post_id, 'informacje_o_wyjedzie_termin_wyjazdu', esc_attr( $_POST['informacje_o_wyjedzie_termin_wyjazdu'] ) );
-	if ( isset( $_POST['informacje_o_wyjedzie_miejsce'] ) )
-		update_post_meta( $post_id, 'informacje_o_wyjedzie_miejsce', esc_attr( $_POST['informacje_o_wyjedzie_miejsce'] ) );
-	if ( isset( $_POST['informacje_o_wyjedzie_koszt'] ) )
-		update_post_meta( $post_id, 'informacje_o_wyjedzie_koszt', esc_attr( $_POST['informacje_o_wyjedzie_koszt'] ) );
-}
-add_action( 'save_post', 'informacje_o_wyjedzie_save' );
-
-
-function informacje_o_szkoleniu_html( $post) {
-	wp_nonce_field( '_informacje_o_szkoleniu_nonce', 'informacje_o_szkoleniu_nonce' ); ?>
-        <div>
-            <label for="informacje_o_szkoleniu_termin_szkolenia">
-                <?php _e( 'termin szkolenia', 'informacje_o_szkoleniu' ); ?>
-            </label>
-            <br>
-            <input type="text" name="informacje_o_szkoleniu_termin_szkolenia" id="informacje_o_szkoleniu_termin_szkolenia" value="<?php echo sjkp_get_meta( 'informacje_o_szkoleniu_termin_szkolenia' ); ?>"> </div>
-        <p>
-            <label for="informacje_o_szkoleniu_miejsce">
-                <?php _e( 'miejsce', 'informacje_o_szkoleniu' ); ?>
-            </label>
-            <br>
-            <input type="text" name="informacje_o_szkoleniu_miejsce" id="informacje_o_szkoleniu_miejsce" value="<?php echo sjkp_get_meta( 'informacje_o_szkoleniu_miejsce' ); ?>"> </p>
-        <p>
-            <label for="informacje_o_szkoleniu_cena">
-                <?php _e( 'cena', 'informacje_o_szkoleniu' ); ?>
-            </label>
-            <br>
-            <input type="text" name="informacje_o_szkoleniu_cena" id="informacje_o_szkoleniu_cena" value="<?php echo sjkp_get_meta( 'informacje_o_szkoleniu_cena' ); ?>"> </p>
-        <?php
-}
-
-function informacje_o_szkoleniu_save( $post_id ) {
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
-	if ( ! isset( $_POST['informacje_o_szkoleniu_nonce'] ) || ! wp_verify_nonce( $_POST['informacje_o_szkoleniu_nonce'], '_informacje_o_szkoleniu_nonce' ) ) return;
-	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
-
-	if ( isset( $_POST['informacje_o_szkoleniu_termin_szkolenia'] ) )
-		update_post_meta( $post_id, 'informacje_o_szkoleniu_termin_szkolenia', esc_attr( $_POST['informacje_o_szkoleniu_termin_szkolenia'] ) );
-	if ( isset( $_POST['informacje_o_szkoleniu_miejsce'] ) )
-		update_post_meta( $post_id, 'informacje_o_szkoleniu_miejsce', esc_attr( $_POST['informacje_o_szkoleniu_miejsce'] ) );
-	if ( isset( $_POST['informacje_o_szkoleniu_cena'] ) )
-		update_post_meta( $post_id, 'informacje_o_szkoleniu_cena', esc_attr( $_POST['informacje_o_szkoleniu_cena'] ) );
-}
-add_action( 'save_post', 'informacje_o_szkoleniu_save' );
-
 
 function prowadzcy_html( $post) {
 	wp_nonce_field( '_prowadzcy_nonce', 'prowadzcy_nonce' ); ?>
@@ -145,7 +53,6 @@ function prowadzcy_html( $post) {
             </div>
             <?php
 }
-
 function prowadzcy_save( $post_id ) {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 	if ( ! isset( $_POST['prowadzcy_nonce'] ) || ! wp_verify_nonce( $_POST['prowadzcy_nonce'], '_prowadzcy_nonce' ) ) return;
@@ -158,8 +65,6 @@ function prowadzcy_save( $post_id ) {
 }
 
 add_action( 'save_post', 'prowadzcy_save' );
-
-
 
 function sjkp_subpage_icon_html( $post) {
 	wp_nonce_field( '_sjkp_subpage_icon_nonce', 'sjkp_subpage_icon_nonce' ); ?>
@@ -209,7 +114,7 @@ function the_sjkp_subpage_icon (){
     $icon_value = sjkp_get_meta( 'sjkp_subpage_icon_ikona' );
     $output = '';
     if ($icon_value && sjkp_get_meta( 'sjkp_subpage_icon_ikona' )!== '0') {
-    $output = '<img class="entry-title-icon" src="'. get_stylesheet_directory_uri() .'/assets/';    
+    $output = '<img class="entry-title-icon" src="'. get_stylesheet_directory_uri() .'/assets/';
     switch ($icon_value) {
     case '1':
         $output.= 'icon_poczatkujacy';
@@ -234,7 +139,7 @@ function the_sjkp_subpage_icon (){
     break;
     case '8':
         $output.= 'icon_terapia';
-    break;        
+    break;
     }
         $output.= '.svg">';
     }
@@ -242,22 +147,99 @@ function the_sjkp_subpage_icon (){
     return $output;
 }
 
+// METABOXY DLA WYJAZDÓW =========================================================================
+function sjkp_wyjazdy( $meta_boxes ) {
+	$prefix = 'sjkp_wyjazdy-';
+
+	$meta_boxes[] = array(
+		'id' => 'sjkp_wyjazdy_meta',
+		'title' => esc_html__( 'Informacje o wyjeździe', 'sjkp_metabox' ),
+		'post_types' => array('sjkp_wyjazdy' ),
+		'context' => 'after_editor',
+		'priority' => 'default',
+		'autosave' => 'false',
+		'fields' => array(
+			array(
+				'id' => $prefix . 'date_start',
+				'type' => 'date',
+				'name' => esc_html__( 'Termin wyjazdu', 'sjkp_metabox' ),
+			),
+			array(
+				'id' => $prefix . 'date_end',
+				'type' => 'date',
+				'name' => esc_html__( 'Termin powrotu', 'sjkp_metabox' ),
+			),
+			array(
+				'id' => $prefix . 'lokalizacja',
+				'type' => 'text',
+				'name' => esc_html__( 'Lokalizacja', 'sjkp_metabox' ),
+			),
+			array(
+				'id' => $prefix . 'cena',
+				'type' => 'text',
+				'name' => esc_html__( 'Cena', 'sjkp_metabox' ),
+			),
+		),
+	);
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'sjkp_wyjazdy' );
+
+// METABOXY DLA SZKOLEŃ =========================================================================
+
+function sjkp_szkolenia( $meta_boxes ) {
+	$prefix = 'sjkp_szkolenia-';
+
+	$meta_boxes[] = array(
+		'id' => 'sjkp_szkolenia_meta',
+		'title' => esc_html__( 'Informacje o szkoleniu', 'sjkp_metabox' ),
+		'post_types' => array('sjkp_szkolenia' ),
+		'context' => 'after_editor',
+		'priority' => 'default',
+		'autosave' => 'false',
+		'fields' => array(
+			array(
+				'id' => $prefix . 'date_start',
+				'type' => 'date',
+				'name' => esc_html__( 'Termin wyjazdu', 'sjkp_metabox' ),
+			),
+			array(
+				'id' => $prefix . 'date_end',
+				'type' => 'date',
+				'name' => esc_html__( 'Termin powrotu', 'sjkp_metabox' ),
+			),
+			array(
+				'id' => $prefix . 'lokalizacja',
+				'type' => 'text',
+				'name' => esc_html__( 'Lokalizacja', 'sjkp_metabox' ),
+			),
+			array(
+				'id' => $prefix . 'cena',
+				'type' => 'text',
+				'name' => esc_html__( 'Cena', 'sjkp_metabox' ),
+			),
+		),
+	);
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'sjkp_szkolenia' );
 
 //Zwracanie wartości metaboxów___________________________________________________________________________________________________________________
 
-    function get_sjkp_subpage_icon (){
+  function get_sjkp_subpage_icon (){
         if (the_sjkp_subpage_icon ()){
         echo the_sjkp_subpage_icon ();
         }
     }
 
+
 function the_sjkp_meta($meta) {
     $url = Get_template_directory_uri();
 //    $output ='';
     if ($meta === 'wyjazdy'){
-        $termin = sjkp_get_meta( 'informacje_o_wyjedzie_termin_wyjazdu' );
-        $miejsce = sjkp_get_meta( 'informacje_o_wyjedzie_miejsce' );
-        $koszt = sjkp_get_meta( 'informacje_o_wyjedzie_koszt' );
+				$termin = date("d.m.Y",strtotime(rwmb_meta( 'sjkp_wyjazdy-date_start' ))) . "-" . date("d.m.Y",strtotime(rwmb_meta( 'sjkp_wyjazdy-date_end' )));
+        $miejsce = rwmb_meta( 'sjkp_wyjazdy-lokalizacja' );
+        $koszt = rwmb_meta( 'sjkp_wyjazdy-cena' );
         //sprawdz czy którakolwiek zmienna posiada wartość:
         if (!empty($termin) || !empty($miejsce) || !empty($koszt)){
                 $output = '<div class="post-meta"><p>' ;
@@ -267,15 +249,15 @@ function the_sjkp_meta($meta) {
             if (!empty($miejsce)){
                 $output.=  '<img class="meta-icon" src="'.$url.'/assets/lokalizacjan.svg">' . $miejsce;
             }
-            if (!empty($koszt)){
-                $output.=  '<img class="meta-icon" src="'.$url.'/assets/kosztn.svg">'. $koszt;
-            }
-            $output.= '</p></div>';  
+            // if (!empty($koszt)){
+            //     $output.=  '<img class="meta-icon" src="'.$url.'/assets/kosztn.svg">'. $koszt;
+            // }
+            $output.= '</p></div>';
         }
-    } elseif ($meta === 'szkolenia'){
-        $termin = sjkp_get_meta( 'informacje_o_szkoleniu_termin_szkolenia' );
-        $miejsce = sjkp_get_meta( 'informacje_o_szkoleniu_miejsce' );
-        $koszt = sjkp_get_meta( 'informacje_o_szkoleniu_cena' );
+    } elseif ($meta === 'szkolenia') {
+				$termin = date("d.m.Y",strtotime(rwmb_meta( 'sjkp_szkolenia-date_start' ))) . "-" . date("d.m.Y",strtotime(rwmb_meta( 'sjkp_szkolenia-date_end' )));
+				$miejsce = rwmb_meta( 'sjkp_szkolenia-lokalizacja' );
+				$koszt = rwmb_meta( 'sjkp_szkolenia-cena' );
         if (!empty($termin) || !empty($miejsce) || !empty($koszt)){
                   $output = '<div class="post-meta"><p>' ;
             if (!empty($termin)){
@@ -284,11 +266,12 @@ function the_sjkp_meta($meta) {
             if (!empty($miejsce)){
                 $output.=  '<img class="meta-icon" src="'.$url.'/assets/lokalizacjan.svg">' . $miejsce;
             }
-            if (!empty($koszt)){
-                $output.=  '<img class="meta-icon" src="'.$url.'/assets/kosztn.svg">'. $koszt;
-            }
-            $output.= '</p></div>';  
+            // if (!empty($koszt)){
+            //     $output.=  '<img class="meta-icon" src="'.$url.'/assets/kosztn.svg">'. $koszt;
+            // }
+            $output.= '</p></div>';
         }
     }
     return $output;
 }
+// Filtr do Wp_Query. Bez tego będzie preferowac date a nie meta_value

@@ -17,19 +17,21 @@ get_header(); ?>
         bcn_display();
     }?>
             </div>
-            <?php 
+            <?php
                 // WP_Query arguments
                 $args = array (
                     'post_type'  => array( 'sjkp_szkolenia' ),
+                    'orderby' => 'meta_value date',
+                    'meta_key' => 'sjkp_szkolenia-date_start',
+                    'order' => 'ASC',
                 );
-
                 // The Query
                 $query = new WP_Query( $args );
 
                 // The Loop
                 if ( $query->have_posts() ) {
                     while ( $query->have_posts() ) {
-                        $query->the_post(); 
+                        $query->the_post();
             ?>
                 <section class="post-excerpt">
                     <?php
@@ -38,7 +40,7 @@ get_header(); ?>
                     <div class="post-meta-wrapper">
                     <?php
                         echo the_sjkp_meta('szkolenia');
-                        the_excerpt(); 
+                        the_excerpt();
                             ?>
                         <a href="<?php echo get_permalink(); ?>"> więcej</a>
                     </div>

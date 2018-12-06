@@ -17,10 +17,13 @@ get_header(); ?>
         bcn_display();
     }?>
             </div>
-            <?php 
+            <?php
                 // WP_Query arguments
                 $args = array (
-                    'post_type'  => array( 'sjkp_wyjazdy' ),
+                        'post_type'  => array( 'sjkp_wyjazdy' ),
+                        'orderby' => 'meta_value date',
+                        'meta_key' => 'sjkp_wyjazdy-date_start',
+                        'order' => 'ASC',
                 );
 
                 // The Query
@@ -29,7 +32,7 @@ get_header(); ?>
                 // The Loop
                 if ( $query->have_posts() ) {
                     while ( $query->have_posts() ) {
-                        $query->the_post(); 
+                        $query->the_post();
             ?>
                 <section class="post-excerpt">
                     <?php
@@ -38,7 +41,7 @@ get_header(); ?>
                     <div class="post-meta-wrapper">
                     <?php
                         echo the_sjkp_meta('wyjazdy');
-                        the_excerpt(); 
+                        the_excerpt();
                             ?>
                         <a href="<?php echo get_permalink(); ?>"> więcej</a>
                     </div>
@@ -51,9 +54,6 @@ get_header(); ?>
                     <p>nie ma jeszcze żadnych postów</p>
                     <?php
                 }
-
-                // Restore original Post Data
-//                wp_reset_postdata();
                 ?>
         </main>
         <!-- #main -->
