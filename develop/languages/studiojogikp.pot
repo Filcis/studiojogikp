@@ -113,11 +113,11 @@ msgstr ""
 msgid "wyjazdy"
 msgstr ""
 
-#: inc/studiojogikp_posttypes.php:38, inc/studiojogikp_posttypes.php:43
+#: inc/studiojogikp_posttypes.php:39, inc/studiojogikp_posttypes.php:44
 msgid "Szkolenia"
 msgstr ""
 
-#: inc/studiojogikp_posttypes.php:39
+#: inc/studiojogikp_posttypes.php:40
 msgid "Szkolenie"
 msgstr ""
 
