@@ -200,3 +200,8 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/metaboxes.php';
 
 require get_template_directory() . '/inc/sjkp_shortcodes.php';
+
+/**
+ * Custom filters
+ */
+require get_template_directory() . '/inc/filters.php';
