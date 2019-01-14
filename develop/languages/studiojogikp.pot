@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Studio Jogi Katarzyny Pilorz 1.0.0
+# Copyright (C) 2019 Studio Jogi Katarzyny Pilorz 1.0.0
 # This file is distributed under the same license as the Studio Jogi Katarzyny Pilorz 1.0.0 package.
 msgid ""
 msgstr ""
@@ -69,27 +69,27 @@ msgstr ""
 msgid "Menu mobilne"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:89
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:92, functions.php:102, functions.php:112, functions.php:122, functions.php:131
+#: functions.php:91, functions.php:101, functions.php:111, functions.php:121, functions.php:130
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:100
+#: functions.php:99
 msgid "Footer kolumna 1"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:109
 msgid "Footer kolumna 2"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:119
 msgid "Footer kolumna 3"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:128
 msgid "Footer kolumna 4"
 msgstr ""
 

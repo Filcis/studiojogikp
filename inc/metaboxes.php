@@ -95,7 +95,12 @@ function sjkp_subpage_icon_html( $post) {
                     <br>
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_8" value="8" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '8' ); ?>>
                     <label for="sjkp_subpage_icon_ikona_8">terapia</label>
-                    <br> </p>
+                    <br>
+										<br>
+                    <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_9" value="9" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '9' ); ?>>
+                    <label for="sjkp_subpage_icon_ikona_9">newsletter</label>
+                    <br>
+								</p>
                 <?php
 }
 
@@ -140,6 +145,9 @@ function the_sjkp_subpage_icon (){
     case '8':
         $output.= 'icon_terapia';
     break;
+		case '9':
+        $output.= 'icon_newsletter';
+    break;
     }
         $output.= '.svg">';
     }
@@ -155,7 +163,7 @@ function sjkp_wyjazdy( $meta_boxes ) {
 		'id' => 'sjkp_wyjazdy_meta',
 		'title' => esc_html__( 'Informacje o wyjeździe', 'sjkp_metabox' ),
 		'post_types' => array('sjkp_wyjazdy' ),
-		'context' => 'after_editor',
+		'context' => 'normal',
 		'priority' => 'default',
 		'autosave' => 'false',
 		'fields' => array(
@@ -194,7 +202,7 @@ function sjkp_szkolenia( $meta_boxes ) {
 		'id' => 'sjkp_szkolenia_meta',
 		'title' => esc_html__( 'Informacje o szkoleniu', 'sjkp_metabox' ),
 		'post_types' => array('sjkp_szkolenia' ),
-		'context' => 'after_editor',
+		'context' => 'normal',
 		'priority' => 'default',
 		'autosave' => 'false',
 		'fields' => array(
