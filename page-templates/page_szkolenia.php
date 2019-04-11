@@ -36,7 +36,9 @@ get_header(); ?>
                 <section class="post-excerpt">
                     <?php
                         the_title( '<h1 class="entry-title">', '</h1>' );
-                        // the_post_thumbnail( 'full' );
+                        if (rwmb_meta( 'sjkp-checkbox_1')) {
+                          the_post_thumbnail( 'full' );
+                        }
                     ?>
                     <div class="post-meta-wrapper">
                     <?php

@@ -158,8 +158,8 @@ function sj_gutenberg_styles() {
 	// Load the theme styles within Gutenberg.
 	 wp_enqueue_style( 'sj-gutenberg', get_stylesheet_uri(), false, '@@pkg.version', 'all' );
 }
-add_action( 'enqueue_block_editor_assets', 'sj_gutenberg_styles' );
 
+add_action( 'enqueue_block_editor_assets', 'sj_gutenberg_styles' );
 
 add_action( 'wp_enqueue_scripts', 'studiojogikp_scripts' );
 /**

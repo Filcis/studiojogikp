@@ -232,6 +232,31 @@ function sjkp_szkolenia( $meta_boxes ) {
 }
 add_filter( 'rwmb_meta_boxes', 'sjkp_szkolenia' );
 
+//Opcjonalny thumbnail na liście
+function conditional_thumbnail( $meta_boxes ) {
+	$prefix = 'sjkp-';
+
+	$meta_boxes[] = array(
+		'id' => 'conditional_thumbnail',
+		'title' => esc_html__( 'Wyświetlanie zdjęcia', 'sjkp' ),
+		'post_types' => array('post', 'sjkp_wyjazdy', 'sjkp_szkolenia'),
+		'context' => 'side',
+		'priority' => 'high',
+		'autosave' => 'false',
+		'fields' => array(
+			array(
+				'id' => $prefix . 'checkbox_1',
+				'name' => esc_html__( 'Zaznacz jeżeli zdjęcie ma by wyświetlane na liście strony', 'sjkp' ),
+				'type' => 'checkbox',
+				'desc' => esc_html__( '', 'sjkp' ),
+			),
+		),
+	);
+
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'conditional_thumbnail' );
+
 //Zwracanie wartości metaboxów___________________________________________________________________________________________________________________
 
   function get_sjkp_subpage_icon (){
