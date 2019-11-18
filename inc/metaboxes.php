@@ -100,6 +100,9 @@ function sjkp_subpage_icon_html( $post) {
                     <input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_9" value="9" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '9' ); ?>>
                     <label for="sjkp_subpage_icon_ikona_9">newsletter</label>
                     <br>
+										<input type="radio" name="sjkp_subpage_icon_ikona" id="sjkp_subpage_icon_ikona_10" value="10" <?php checked( sjkp_get_meta( 'sjkp_subpage_icon_ikona' ), '10' ); ?>>
+                    <label for="sjkp_subpage_icon_ikona_10">dni otwarte</label>
+										<br />
 								</p>
                 <?php
 }
@@ -147,6 +150,9 @@ function the_sjkp_subpage_icon (){
     break;
 		case '9':
         $output.= 'icon_newsletter';
+    break;
+		case '10':
+        $output.= 'icon_dni_otwarte';
     break;
     }
         $output.= '.svg">';

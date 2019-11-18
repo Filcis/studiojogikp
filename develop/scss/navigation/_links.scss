@@ -45,8 +45,8 @@ a {
 }
 
 .page-id-19 .site-content a,
-.single-sjkp_wyjazdy .site-content a, 
-.single-sjkp_wyjazdy .site-content .widget-area .menu li a, 
+.single-sjkp_wyjazdy .site-content a,
+.single-sjkp_wyjazdy .site-content .widget-area .menu li a,
 .page-id-19 .site-content .widget-area .menu li a {
     color: $cobalt;
        &:visited {
@@ -55,8 +55,8 @@ a {
 }
 
 .page-id-15 .site-content a,
-.single-sjkp_szkolenia .site-content a, 
-.single-sjkp_szkolenia .site-content .widget-area .menu li a, 
+.single-sjkp_szkolenia .site-content a,
+.single-sjkp_szkolenia .site-content .widget-area .menu li a,
 .page-id-15 .site-content .widget-area .menu li a {
     color: $indigo;
        &:visited {
@@ -64,3 +64,6 @@ a {
     }
 }
 
+#pol_prywatnosci {
+  color: white;
+}

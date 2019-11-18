@@ -17,19 +17,20 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
         <?php wp_head(); ?>
     </head>
 
     <body <?php body_class(); ?>>
       <!-- Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125267504-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138688116-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        gtag('config', 'UA-125267504-1');
-      </script>
+  gtag('config', 'UA-138688116-1');
+</script>
       <!-- Koniec Google Analytics -->
 
         <div id="page" class="site">

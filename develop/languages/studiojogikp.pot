@@ -93,15 +93,15 @@ msgstr ""
 msgid "Footer kolumna 4"
 msgstr ""
 
-#: header.php:37
+#: header.php:38
 msgid "Skip to content"
 msgstr ""
 
-#: home.php:3, page-templates/page_wyjazdy.php:3
+#: home.php:3
 msgid "Joga w pięknych miejscach"
 msgstr ""
 
-#: inc/studiojogikp_posttypes.php:5
+#: inc/studiojogikp_posttypes.php:5, page-templates/page_wyjazdy.php:3
 msgid "Wyjazdy"
 msgstr ""
 
@@ -113,7 +113,7 @@ msgstr ""
 msgid "wyjazdy"
 msgstr ""
 
-#: inc/studiojogikp_posttypes.php:39, inc/studiojogikp_posttypes.php:44
+#: inc/studiojogikp_posttypes.php:39, inc/studiojogikp_posttypes.php:44, page-templates/page_szkolenia.php:3
 msgid "Szkolenia"
 msgstr ""
 
@@ -160,10 +160,6 @@ msgstr ""
 
 #: page-templates/page_full-width.php:3
 msgid "Full Width Page"
-msgstr ""
-
-#: page-templates/page_szkolenia.php:3
-msgid "Szkolenia/treningi dla nauczycieli"
 msgstr ""
 
 #: search.php:19

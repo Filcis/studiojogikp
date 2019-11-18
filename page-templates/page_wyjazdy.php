@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Joga w pięknych miejscach
+ * Template Name: Wyjazdy
  *
  *
  * @package studiojogikp
